@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="/theme/css/bootstrap.flatly.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/sandstone.css" rel="stylesheet">
+    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
 
@@ -70,13 +70,36 @@ Matthew Devaney's Blog            </a>
                 <div class="summary"><p>Here's a sample code snippet:</p>
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
 </pre></div>
+
+
+<p>And then another sample code snippet</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_twice</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">wrapper_do_twice</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">wrapper_do_twice</span>
+
+
+<span class="nd">@do_twice</span>
+<span class="k">def</span> <span class="nf">say_whee</span><span class="p">(</span><span class="n">some_text</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">some_text</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Whee!&#39;</span>
+<span class="n">say_whee</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="some text" src="img/pelican_icon.png">
+<img alt="some text" src="img/excel_icon.png">
+<img alt="some text" src="img/python_icon.png"></p>
+<p>Here's a link to a website
+<a href="https://www.arstechinca.com">Ars Technica</a></p>
                     <a class="btn btn-default btn-xs" href="/posts/2019/02/03/third-post/">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
                 <h2><a href="/posts/2019/02/02/second-post/">Second Post</a></h2>
-                <div class="summary"><p>Text can be emphasized </p>
+                <div class="summary"><p>Text can be emphasized:</p>
 <p>This text is <strong>bold</strong></p>
 <p>This text is <em>italic</em></p>
 <p>This text is <strong><em>italicized and bolded</em></strong></p>
