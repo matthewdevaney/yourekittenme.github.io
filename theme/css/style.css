@@ -74,9 +74,14 @@ body {
     margin-right: 3px;
 }
 
+
+/* disabled because links were showing as same color as text
+
 a, a:hover {
     color: inherit;
 }
+
+*/
 
 .entry-content a {
     text-decoration: none;
