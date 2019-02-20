@@ -1027,9 +1027,10 @@ html{
     font-size:10px;
     -webkit-tap-highlight-color:rgba(0,0,0,0)
 }
+/* font-size changed from 14px */
 body{
     font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size:14px;
+    font-size:16px;
     line-height:1.42857143;
     color:#3e3f3a;
     background-color:#ffffff
@@ -1156,8 +1157,9 @@ h5,.h5{
 h6,.h6{
     font-size:12px
 }
+/* origin margin was 0 0 10px */
 p{
-    margin:0 0 10px
+    margin: 15px 0 15px
 }
 .lead{
     margin-bottom:20px;
@@ -1388,11 +1390,12 @@ kbd kbd{
     -webkit-box-shadow:none;
     box-shadow:none
 }
+/* changed font-size from 13px */
 pre{
     display:block;
     padding:9.5px;
     margin:0 0 10px;
-    font-size:13px;
+    font-size:16px;
     line-height:1.42857143;
     word-break:break-all;
     word-wrap:break-word;
@@ -3536,10 +3539,11 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
     margin-bottom:0;
     border-width:1px 0 0
 }
+/* changed font size from 18px */
 .navbar-brand{
     float:left;
     padding:20px 15px;
-    font-size:18px;
+    font-size:24px;
     line-height:20px;
     height:60px
 }
@@ -4540,8 +4544,9 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:hover,a.list-gro
     -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.05);
     box-shadow:0 1px 1px rgba(0,0,0,0.05)
 }
+/* changed margin bottom from 15px  */
 .panel-body{
-    padding:15px
+    padding:0px
 }
 .panel-heading{
     padding:10px 15px;
@@ -5633,8 +5638,9 @@ button.close{
     font-weight:500;
     text-transform:uppercase
 }
+/* changed font-size from 14px*/
 .navbar .nav>li>a{
-    font-size:14px;
+    font-size:18px;
     line-height:22px;
     font-weight:500;
     text-transform:capitalize
