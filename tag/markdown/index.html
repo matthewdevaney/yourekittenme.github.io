@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Third Post - Matthew Devaney</title>
+    <title>markdown - Matthew Devaney</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,19 +9,16 @@
 
 
 
-<link rel="canonical" href="/posts/2019/02/03/third-post/">
 
-        <meta name="author" content="Matthew Devaney" />
-        <meta name="description" content="Check out this Youtube video" />
+    <meta name="author" content="Matthew Devaney" />
+    <meta name="keywords" content="markdown" />
 
+    <!-- Open Graph tags -->
         <meta property="og:site_name" content="Matthew Devaney" />
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Third Post"/>
-        <meta property="og:url" content="/posts/2019/02/03/third-post/"/>
-        <meta property="og:description" content="Check out this Youtube video"/>
-        <meta property="article:published_time" content="2019-02-03" />
-            <meta property="article:section" content="Python" />
-            <meta property="article:author" content="Matthew Devaney" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Matthew Devaney"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="Matthew Devaney"/>
 
 
 
@@ -78,47 +75,42 @@ Matthew Devaney            </a>
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
-    <section id="content">
-        <article>
-            <header class="page-header">
-                <h1>
-                    Third Post
-                </h1>
-                <div class="panel-body">
-<footer class="post-info">
-    <span class="published">
-        <!-- deleted <i class="fa fa-calendar"></i> -->
-        <time datetime="2019-02-03T00:00:00-06:00"> February 03, 2019</time>
-    </span>
+            <article>
+                <!-- changed from <h2><a href="/posts/2019/02/04/fourth-post/">Fourth Post</a></h2> -->
+                <h2>
+                        <img src="\img\pelican_icon.png">
+                    Fourth Post
+                </h2>
+                <div class="summary"><p>Here's a sample code snippet:</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
+</pre></div>
 
 
+<p>And then another sample code snippet</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_twice</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">wrapper_do_twice</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">wrapper_do_twice</span>
 
-        <!-- deleted <span class="label label-default">Category</span> -->
-        , Category:
-        <a href="/category/python.html">Python</a>
+
+<span class="nd">@do_twice</span>
+<span class="k">def</span> <span class="nf">say_whee</span><span class="p">(</span><span class="n">some_text</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">some_text</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Whee!&#39;</span>
+<span class="n">say_whee</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
 
 
-    
-</footer><!-- /.post-info -->                </div>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <!-- div panel-body was here -->
+<p><img alt="some text" src="/img/pelican_icon.png">
+<img alt="some text" src="/img/excel_icon.png">
+<img alt="some text" src="/img/python_icon.png"></p>
+<p>Here's a link to a website
+<a href="https://www.arstechnica.com">Ars Technica</a></p>
+                    <a class="btn btn-default btn-xs" href="/posts/2019/02/04/fourth-post/">read more ...</a>
                 </div>
-                <p>Check out this Youtube video</p>
-<p><span class="videobox">
-                <div class="video-responsive">
-                    <iframe width="640" height="390"
-                        src='https://www.youtube.com/embed/ek6I92-npM0'
-                        frameborder='0' webkitAllowFullScreen mozallowfullscreen
-                        allowFullScreen>
-                    </iframe>
-                </div>
-            </span></p>
-            </div>
-            <!-- /.entry-content -->
-        </article>
-    </section>
+            </article>
+            <hr/>
 
         </div>
     </div>
