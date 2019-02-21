@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matthew Devaney - Python</title><link href="https://matthewdevaney.com/" rel="alternate"></link><link href="https://matthewdevaney.com/feeds/python.atom.xml" rel="self"></link><id>https://matthewdevaney.com/</id><updated>2019-02-04T00:00:00-06:00</updated><entry><title>Fourth Post</title><link href="https://matthewdevaney.com/posts/2019/02/04/fourth-post/" rel="alternate"></link><published>2019-02-04T00:00:00-06:00</published><updated>2019-02-04T00:00:00-06:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-02-04:/posts/2019/02/04/fourth-post/</id><summary type="html">&lt;p&gt;Here's a sample code snippet:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hello World!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And then another sample code snippet&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wrapper_do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper_do_twice&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@do_twice&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Whee!&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_icon.png"&gt;
+&lt;img alt="some text" src="https://matthewdevaney.com/img/excel_icon.png"&gt;
+&lt;img alt="some text" src="https://matthewdevaney.com/img/python_icon.png"&gt;&lt;/p&gt;
+&lt;p&gt;Here's a link to a website
+&lt;a href="https://www.arstechnica.com"&gt;Ars Technica&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Here's a sample code snippet:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Hello World!&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And then another sample code snippet&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;wrapper_do_twice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;func&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lower&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;wrapper_do_twice&lt;/span&gt;
+
+
+&lt;span class="nd"&gt;@do_twice&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;some_text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Whee!&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;say_whee&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_icon.png"&gt;
+&lt;img alt="some text" src="https://matthewdevaney.com/img/excel_icon.png"&gt;
+&lt;img alt="some text" src="https://matthewdevaney.com/img/python_icon.png"&gt;&lt;/p&gt;
+&lt;p&gt;Here's a link to a website
+&lt;a href="https://www.arstechnica.com"&gt;Ars Technica&lt;/a&gt;&lt;/p&gt;</content><category term="pelican"></category><category term="markdown"></category></entry><entry><title>Third Post</title><link href="https://matthewdevaney.com/posts/2019/02/03/third-post/" rel="alternate"></link><published>2019-02-03T00:00:00-06:00</published><updated>2019-02-03T00:00:00-06:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-02-03:/posts/2019/02/03/third-post/</id><summary type="html">&lt;p&gt;Check out this Youtube video&lt;/p&gt;
+&lt;p&gt;&lt;span class="videobox"&gt;
+                &lt;div class="video-responsive"&gt;
+                    &lt;iframe width="640" height="390"
+                        src='https://www.youtube.com/embed/ek6I92-npM0'
+                        frameborder='0' webkitAllowFullScreen mozallowfullscreen
+                        allowFullScreen&gt;
+                    &lt;/iframe&gt;
+                &lt;/div&gt;
+            &lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Check out this Youtube video&lt;/p&gt;
+&lt;p&gt;&lt;span class="videobox"&gt;
+                &lt;div class="video-responsive"&gt;
+                    &lt;iframe width="640" height="390"
+                        src='https://www.youtube.com/embed/ek6I92-npM0'
+                        frameborder='0' webkitAllowFullScreen mozallowfullscreen
+                        allowFullScreen&gt;
+                    &lt;/iframe&gt;
+                &lt;/div&gt;
+            &lt;/span&gt;&lt;/p&gt;</content></entry><entry><title>Second Post</title><link href="https://matthewdevaney.com/posts/2019/02/02/second-post/" rel="alternate"></link><published>2019-02-02T00:00:00-06:00</published><updated>2019-02-02T00:00:00-06:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-02-02:/posts/2019/02/02/second-post/</id><summary type="html">&lt;p&gt;Text can be emphasized:&lt;/p&gt;
+&lt;p&gt;This text is &lt;strong&gt;bold&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This text is &lt;em&gt;italic&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This text is &lt;strong&gt;&lt;em&gt;italicized and bolded&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Heading sizes are determined by how many # are at the front of a line&lt;/p&gt;
+&lt;h1&gt;Heading Size 1&lt;/h1&gt;
+&lt;h2&gt;Heading Size 2&lt;/h2&gt;
+&lt;h3&gt;Heading Size 3&lt;/h3&gt;
+&lt;h4&gt;Heading Size 4&lt;/h4&gt;
+&lt;h5&gt;Heading Size 5&lt;/h5&gt;
+&lt;h6&gt;Heading Size 6 …&lt;/h6&gt;</summary><content type="html">&lt;p&gt;Text can be emphasized:&lt;/p&gt;
+&lt;p&gt;This text is &lt;strong&gt;bold&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This text is &lt;em&gt;italic&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This text is &lt;strong&gt;&lt;em&gt;italicized and bolded&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Heading sizes are determined by how many # are at the front of a line&lt;/p&gt;
+&lt;h1&gt;Heading Size 1&lt;/h1&gt;
+&lt;h2&gt;Heading Size 2&lt;/h2&gt;
+&lt;h3&gt;Heading Size 3&lt;/h3&gt;
+&lt;h4&gt;Heading Size 4&lt;/h4&gt;
+&lt;h5&gt;Heading Size 5&lt;/h5&gt;
+&lt;h6&gt;Heading Size 6&lt;/h6&gt;</content></entry><entry><title>First Post</title><link href="https://matthewdevaney.com/posts/2019/02/01/first-post/" rel="alternate"></link><published>2019-02-01T00:00:00-06:00</published><updated>2019-02-01T00:00:00-06:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-02-01:/posts/2019/02/01/first-post/</id><summary type="html">&lt;p&gt;Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales. Van Rossum led the language community …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales. Van Rossum led the language community until stepping down as leader in July 2018.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Python features a dynamic type system and automatic memory management. It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Python interpreters are available for many operating systems. CPython, the reference implementation of Python, is open source software and has a community-based development model, as do nearly all of Python's other implementations. Python and CPython are managed by the non-profit Python Software Foundation.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One&lt;/li&gt;
+&lt;li&gt;Two&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Three&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Four&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Five&lt;/li&gt;
+&lt;li&gt;Six&lt;/li&gt;
+&lt;/ul&gt;</content></entry></feed>

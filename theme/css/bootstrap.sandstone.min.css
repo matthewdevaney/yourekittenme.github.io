@@ -5655,7 +5655,7 @@ button.close{
     font-size:11px;
     line-height:22px;
     font-weight:500;
-    text-transform:uppercase
+    /* deleted from text-transform:uppercase */
 }
 .btn:hover{
     border-color:transparent
