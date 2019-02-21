@@ -12,13 +12,13 @@
 <link rel="canonical" href="/posts/2019/02/04/fourth-post/">
 
         <meta name="author" content="Matthew Devaney" />
-        <meta name="description" content="Check out this Youtube video" />
+        <meta name="description" content="Here&#39;s a sample code snippet: print(&#39;Hello World!&#39;) And then another sample code snippet def do_twice(func): def wrapper_do_twice(*args, **kwargs): return func(*args, **kwargs).lower() return wrapper_do_twice @do_twice def say_whee(some_text): print(some_text) x = &#39;Whee!&#39; say_whee(x) Here&#39;s a link to a website Ars Technica" />
 
         <meta property="og:site_name" content="Matthew Devaney" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Fourth Post"/>
         <meta property="og:url" content="/posts/2019/02/04/fourth-post/"/>
-        <meta property="og:description" content="Check out this Youtube video"/>
+        <meta property="og:description" content="Here&#39;s a sample code snippet: print(&#39;Hello World!&#39;) And then another sample code snippet def do_twice(func): def wrapper_do_twice(*args, **kwargs): return func(*args, **kwargs).lower() return wrapper_do_twice @do_twice def say_whee(some_text): print(some_text) x = &#39;Whee!&#39; say_whee(x) Here&#39;s a link to a website Ars Technica"/>
         <meta property="article:published_time" content="2019-02-04" />
             <meta property="article:section" content="Python" />
             <meta property="article:author" content="Matthew Devaney" />
@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="/theme/css/bootstrap.sandstone.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="/theme/css/pygments/colorful.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
 
@@ -82,19 +82,13 @@ Matthew Devaney            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="/posts/2019/02/04/fourth-post/"
-                       rel="bookmark"
-                       title="Permalink to Fourth Post">
                         Fourth Post
-                    </a>
                 </h1>
-            </header>
-            <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
+                <div class="panel-body">
 <footer class="post-info">
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2019-02-04T00:00:00-06:00"> 2019-02-04</time>
+        <!-- deleted <i class="fa fa-calendar"></i> -->
+        <time datetime="2019-02-04T00:00:00-06:00"> February 04, 2019</time>
     </span>
 
 
@@ -102,18 +96,38 @@ Matthew Devaney            </a>
 
 
     
-</footer><!-- /.post-info -->                    </div>
+</footer><!-- /.post-info -->                </div>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <!-- div panel-body was here -->
                 </div>
-                <p>Check out this Youtube video</p>
-<p><span class="videobox">
-                <div class="video-responsive">
-                    <iframe width="640" height="390"
-                        src='https://www.youtube.com/embed/ek6I92-npM0'
-                        frameborder='0' webkitAllowFullScreen mozallowfullscreen
-                        allowFullScreen>
-                    </iframe>
-                </div>
-            </span></p>
+                <p>Here's a sample code snippet:</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>And then another sample code snippet</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">do_twice</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">wrapper_do_twice</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">wrapper_do_twice</span>
+
+
+<span class="nd">@do_twice</span>
+<span class="k">def</span> <span class="nf">say_whee</span><span class="p">(</span><span class="n">some_text</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">some_text</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Whee!&#39;</span>
+<span class="n">say_whee</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+
+<p><img alt="some text" src="/img/pelican_icon.png">
+<img alt="some text" src="/img/excel_icon.png">
+<img alt="some text" src="/img/python_icon.png"></p>
+<p>Here's a link to a website
+<a href="https://www.arstechinca.com">Ars Technica</a></p>
             </div>
             <!-- /.entry-content -->
         </article>

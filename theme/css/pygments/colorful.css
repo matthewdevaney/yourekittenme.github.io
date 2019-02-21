@@ -54,7 +54,7 @@
 .highlight pre .si { background-color: #eeeeee } /* Literal.String.Interpol */
 .highlight pre .sx { color: #DD2200; background-color: #fff0f0 } /* Literal.String.Other */
 .highlight pre .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
-.highlight pre .s1 { background-color: #fff0f0 } /* Literal.String.Single */
+.highlight pre .s1 { background-color: transparent } /* Literal.String.Single (changed from #fff0f0) */
 .highlight pre .ss { color: #AA6600 } /* Literal.String.Symbol */
 .highlight pre .bp { color: #007020 } /* Name.Builtin.Pseudo */
 .highlight pre .vc { color: #336699 } /* Name.Variable.Class */
