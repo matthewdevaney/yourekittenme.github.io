@@ -1043,7 +1043,7 @@ input,button,select,textarea{
 
 /* changed default link color from #93c54b */
 a{
-    color:#98978b;
+    color:#20936a;
     text-decoration:none
 }
 
@@ -3766,11 +3766,13 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
 .navbar-default .navbar-text{
     color:#8e8c84
 }
+/* changed from #98978b */
 .navbar-default .navbar-nav>li>a{
-    color:#98978b
-}
-.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus{
     color:#ffffff;
+}
+/* changed from #ffffff */
+.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus{
+    color:#3ed6a0;
     background-color:transparent
 }
 .navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus{
@@ -5442,7 +5444,7 @@ button.close{
     position:fixed
 }
 @-ms-viewport{
-    width:device-width
+    width:device-width;
 }
 .visible-xs,.visible-sm,.visible-md,.visible-lg{
     display:none !important
