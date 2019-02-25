@@ -29,11 +29,8 @@
     <link href="/theme/css/pygments/colorful.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Matthew Devaney ATOM Feed"/>
 
-        <link href="/feeds/python.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Matthew Devaney Python ATOM Feed"/>
+
 </head>
 <body>
 
@@ -81,8 +78,10 @@ Matthew Devaney            </a>
             <article>
                 <!-- changed from <h2><a href="/posts/2019/02/04/fourth-post/">Fourth Post</a></h2> -->
                 <h2>
-                        <img src="\img\pelican_icon.png">
-                    Fourth Post
+                    <div class="title">
+                            <img src="\img\pelican_icon.png">
+                        <a href="/posts/2019/02/04/fourth-post/">Fourth Post</a>
+                    </div>
                 </h2>
                 <div class="summary"><p>Here's a sample code snippet:</p>
 <div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">)</span>
@@ -114,53 +113,6 @@ Matthew Devaney            </a>
                 </div>
             </article>
             <hr/>
-            <article>
-                <!-- changed from <h2><a href="/posts/2019/02/03/third-post/">Third Post</a></h2> -->
-                <h2>
-                    Third Post
-                </h2>
-                <div class="summary"><p>Check out this Youtube video</p>
-<p><span class="videobox">
-                <iframe width="640" height="390"
-                    src='https://www.youtube.com/embed/ek6I92-npM0'
-                    frameborder='0' webkitAllowFullScreen mozallowfullscreen
-                    allowFullScreen>
-                </iframe>
-            </span></p>
-                    <a class="btn btn-default btn-xs" href="/posts/2019/02/03/third-post/">read more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <!-- changed from <h2><a href="/posts/2019/02/02/second-post/">Second Post</a></h2> -->
-                <h2>
-                    Second Post
-                </h2>
-                <div class="summary"><p>Text can be emphasized:</p>
-<p>This text is <strong>bold</strong></p>
-<p>This text is <em>italic</em></p>
-<p>This text is <strong><em>italicized and bolded</em></strong></p>
-<p>Heading sizes are determined by how many # are at the front of a line</p>
-<h1>Heading Size 1</h1>
-<h2>Heading Size 2</h2>
-<h3>Heading Size 3</h3>
-<h4>Heading Size 4</h4>
-<h5>Heading Size 5</h5>
-<h6>Heading Size 6 …</h6>
-                    <a class="btn btn-default btn-xs" href="/posts/2019/02/02/second-post/">read more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <!-- changed from <h2><a href="/posts/2019/02/01/first-post/">First Post</a></h2> -->
-                <h2>
-                    First Post
-                </h2>
-                <div class="summary"><p>Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. It provides constructs that enable clear programming on both small and large scales. Van Rossum led the language community …</p>
-                    <a class="btn btn-default btn-xs" href="/posts/2019/02/01/first-post/">read more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         </div>
     </div>
@@ -188,38 +140,6 @@ Matthew Devaney            </a>
 <script src="/theme/js/respond.min.js"></script>
 
 
-    <!-- Disqus -->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'matthewdevaney'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-    <!-- End Disqus Code -->
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-135011604-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-    <!-- End Google Analytics Code -->
 
 
 </body>
