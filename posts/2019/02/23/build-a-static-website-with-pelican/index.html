@@ -35,11 +35,8 @@
     <link href="/theme/css/pygments/colorful.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Matthew Devaney ATOM Feed"/>
 
-        <link href="/feeds/web-development.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Matthew Devaney Web Development ATOM Feed"/>
+
 </head>
 <body>
 
@@ -195,7 +192,7 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 </pre></div>
 
 
-<p>To view our website open your web browser and go to the address. <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>.</p>
+<p>To view our website open your web browser and go to the the address. <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>.</p>
 <p><img alt="some text" src="/img/pelican_tutorial_1.png"></p>
 <p>We have now successfully setup our basic Pelican project.</p>
 <h3>Choosing A Theme</h3>
@@ -278,7 +275,7 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 
 <p>View the latest version of our website at <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>.  Notice when you expand and shrink the width of the web browser window the website layout changes to fit?  By selecting a theme that incorporates responsive web design principles our website will be viewable on screens of all shapes and sizes.</p>
 <p><img alt="some text" src="/img/pelican_tutorial_2.png"></p>
-<p>The pelican-bootstrap3 theme comes with several options to change the style of our website.  To view the full list of  available themes go the folder blog/source/theme/css.  You will see several files with the filename <em>bootstrap.(some name).min.css.  We will be using the </em>bootstrap.flatly.min.css<em> file to style our website. Open </em>pelicanconf.py* and add the following line.  Take a moment to try out some other options if you'd like to see what's available.</p>
+<p>The pelican-bootstrap3 theme comes with several options to change the style of our website.  To view the full list of  available themes go the folder blog/source/theme/css.  You will see several files with the filename <em>bootstrap.(some name).min.css.  We will be using the the </em>bootstrap.flatly.min.css<em> file to style our website. Open </em>pelicanconf.py* and add the following line.  Take a moment to try out some other options if you'd like to see what's available.</p>
 <div class="highlight"><pre><span></span><span class="n">BOOTSTRAP_THEME</span> <span class="o">=</span> <span class="s1">&#39;flatly&#39;</span>
 </pre></div>
 
@@ -297,35 +294,6 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 <p><img alt="some text" src="/img/pelican_tutorial_3.png"></p>
             </div>
             <!-- /.entry-content -->
-    <hr/>
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
-
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'matthewdevaney'; // required: replace example with your forum shortname
-
-            var disqus_config = function () {
-                this.language = "en";
-
-                        this.page.identifier = '2019-02-23-build-a-static-website-with-pelican';
-            };
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    </section>
         </article>
     </section>
 
@@ -355,38 +323,6 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 <script src="/theme/js/respond.min.js"></script>
 
 
-    <!-- Disqus -->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'matthewdevaney'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-    <!-- End Disqus Code -->
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-135011604-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-    <!-- End Google Analytics Code -->
 
 
 </body>
