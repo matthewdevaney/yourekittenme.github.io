@@ -2,7 +2,7 @@
 .highlight pre .hll { background-color: #ffffcc }
 .highlight pre  { background: #ffffff; }
 .highlight pre .c { font-style: italic } /* Comment */
-.highlight pre .err { border: 1px solid #FF0000 } /* Error */
+.highlight pre .err { border: 0px solid #FF0000 } /* Error */
 .highlight pre .k { font-weight: normal } /* Keyword */
 .highlight pre .cm { font-style: normal } /* Comment.Multiline */
 .highlight pre .c1 { font-style: normal } /* Comment.Single */

@@ -145,8 +145,9 @@ table{
     border-collapse:collapse;
     border-spacing:0
 }
+/* changed from 0px*/
 td,th{
-    padding:0
+    padding:5px 15px 0px 0px
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print{
