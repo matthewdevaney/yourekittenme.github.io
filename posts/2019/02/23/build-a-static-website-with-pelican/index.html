@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="/theme/css/bootstrap.sandstone.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/colorful.css" rel="stylesheet">
+    <link href="/theme/css/pygments/bw.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
 
@@ -280,8 +280,17 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 </pre></div>
 
 
-<p>At this time we can also change the style for code blocks we may write in our blog posts.  Pelican displays code blocks using the <a href="https://help.farbox.com/pygments.html">Pygments</a> code highlighter. To view a full list of the available Pygments styles go to the folder blog/source/theme/css/pygments. It contains many files with the filename <em>(some name).css</em>. Our website will use the <em>monokai.css</em> to style code blocks. Open <em>pelicanconf.py</em> and add the following line.</p>
+<p>At this time we can also change the style for code blocks we may write in our blog posts.  Pelican displays code blocks using the <a href="https://help.farbox.com/pygments.html">Pygments</a> code highlighter. To view a full list of the available Pygments styles go to the folder blog/source/theme/css/pygments. Our website will use <em>monokai.css</em> to style code blocks.  Add the following line to <em>pelicanconf.py</em>.</p>
 <div class="highlight"><pre><span></span><span class="n">PYGMENTS_STYLE</span> <span class="o">=</span> <span class="s1">&#39;monokai&#39;</span>
+</pre></div>
+
+
+<p>Finally, lets update the sidebar with our own preferred links and social pages.  You can use the websites below or choose your own.  Update the following line in <em>pelicanconf.py</em></p>
+<div class="highlight"><pre><span></span><span class="n">LINKS</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;Ars Technica&#39;</span><span class="p">,</span> <span class="s1">&#39;https://arstechnica.com/&#39;</span><span class="p">),</span>
+     <span class="p">(</span><span class="s1">&#39;Wikipedia&#39;</span><span class="p">,</span> <span class="s1">&#39;https://wikipedia.org&#39;</span><span class="p">),)</span>
+
+<span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;Twitter&#39;</span><span class="p">,</span> <span class="s1">&#39;https://twitter.com/mbdevaney&#39;</span><span class="p">),</span>
+         <span class="p">(</span><span class="s1">&#39;Github&#39;</span><span class="p">,</span> <span class="s1">&#39;https://github.com/yourekittenme&#39;</span><span class="p">),)</span>
 </pre></div>
 
 
