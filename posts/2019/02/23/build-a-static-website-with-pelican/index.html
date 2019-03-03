@@ -326,10 +326,12 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 <span class="n">Category</span><span class="o">:</span> <span class="n">blogging</span>
 <span class="n">Tags</span><span class="o">:</span> <span class="n">python</span><span class="o">,</span> <span class="n">markdown</span><span class="o">,</span> <span class="n">pelican</span>
 <span class="n">Slug</span><span class="o">:</span> <span class="n">my</span><span class="o">-</span><span class="n">first</span><span class="o">-</span><span class="n">blog</span><span class="o">-</span><span class="n">post</span>
+
+<span class="n">Blog</span> <span class="n">post</span> <span class="n">content</span> <span class="n">goes</span> <span class="n">here</span>
 </pre></div>
 
 
-<p>Metadata should always appear at the top of the file.  Each piece of metadata must be on a new line and follows the format <em>metadata_keyword: data</em>.  Here's a list of the most common keywords and their usage.</p>
+<p>Metadata should always appear at the top of the file.  Each piece of metadata must be on a new line and follows the format <em>metadata_keyword: data</em>.  Here's a list of the most common keywords and their usage:</p>
 <table>
 <thead>
 <tr>
@@ -386,6 +388,149 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 </tr>
 </tbody>
 </table>
+<p>Regenerate the website to view the result.  Our first post is now showing on the main blog page. Take a moment to browse the post and consider how the metadata we supplied affected the webpage that was generated.</p>
+<div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span>
+<span class="n">pelican</span> <span class="o">--</span><span class="n">listen</span>
+</pre></div>
+
+
+<p><img alt="some text" src="/img/pelican_tutorial_4.png"></p>
+<p>Now we will use Markdown to write our post's content. Markdown is a language written for non-programmers that uses symbols to represent HTML.  We apply markdown to a plain text file with the extension .md to do things link change the style (e.g. bold, italics), insert pictures and create links.  When we use Pelican to generate our website it will read the markdown file and convert it to HTML.</p>
+<p>Anyone can learn the basics of Markdown in about 10 minutes.  The language's syntax is very well documented on the web so we will not discuss it in full detail here.  Instead we will review a few sample posts to understand the basics which will include examples specific to Pelican.  I recommend you check out either the <a href="https://www.markdownguide.org/">interactive tutorial</a> at markdownguide.org or Adam Pritchard's <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> on Github before moving on with the tutorial.</p>
+<p>Create a file called <em>markdown_examples_1.md" in the same location as </em>first_post.md*.  Insert the following text:</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">Markdown</span> <span class="n">Examples</span> <span class="n">Part</span> <span class="mi">1</span>
+<span class="n">Author</span><span class="o">:</span> <span class="n">Matthew</span> <span class="n">Devaney</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">02</span> <span class="mi">12</span><span class="o">:</span><span class="mi">00</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">blogging</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">markdown</span>
+
+<span class="n">Basic</span> <span class="n">markdown</span> <span class="n">examples</span> <span class="n">are</span> <span class="n">shown</span> <span class="n">below</span>
+
+<span class="n">This</span> <span class="n">text</span> <span class="k">is</span> <span class="o">**</span><span class="n">bold</span><span class="o">**</span>
+<span class="n">This</span> <span class="n">text</span> <span class="k">is</span> <span class="n">also</span> <span class="n">__bold__</span>
+
+<span class="n">This</span> <span class="n">text</span> <span class="k">is</span> <span class="o">*</span><span class="n">italic</span><span class="o">*</span>
+<span class="n">This</span> <span class="n">text</span> <span class="k">is</span> <span class="n">also</span> <span class="n">_italic_</span>
+
+<span class="n">This</span> <span class="n">text</span> <span class="k">is</span> <span class="o">**</span><span class="n">_italic</span> <span class="n">and</span> <span class="n">bold_</span><span class="o">**</span>
+
+<span class="err">#</span> <span class="n">An</span> <span class="n">h1</span> <span class="n">heading</span>
+<span class="err">##</span> <span class="n">An</span> <span class="n">h2</span> <span class="n">heading</span>
+<span class="err">###</span> <span class="n">An</span> <span class="n">h3</span> <span class="n">heading</span><span class="o">...</span>
+<span class="err">######</span> <span class="n">An</span> <span class="n">h6</span> <span class="n">heading</span>
+
+<span class="n">A</span> <span class="n">list</span> <span class="k">with</span> <span class="n">numbers</span><span class="o">:</span>
+<span class="mi">1</span><span class="o">.</span> <span class="n">One</span>
+<span class="mi">2</span><span class="o">.</span> <span class="n">Two</span>
+<span class="mi">3</span><span class="o">.</span> <span class="n">Three</span>
+
+<span class="n">A</span> <span class="n">list</span> <span class="k">with</span> <span class="n">bullets</span><span class="o">:</span>
+<span class="o">*</span> <span class="n">Bullet</span>
+<span class="o">*</span> <span class="n">Bullet</span>
+<span class="o">*</span> <span class="n">Bullet</span>
+
+<span class="n">Here</span><span class="s1">&#39;s a blockquote:</span>
+
+<span class="s1">&amp;gt; Simple is better than complex</span>
+
+<span class="s1">Here&#39;</span><span class="n">s</span> <span class="n">a</span> <span class="n">table</span><span class="o">:</span>
+
+<span class="o">|</span> <span class="n">Column1</span> <span class="o">|</span> <span class="n">Column</span> <span class="mi">2</span> <span class="o">|</span> <span class="n">Column</span> <span class="mi">3</span>
+<span class="o">|---|---|---|</span>
+<span class="o">|</span> <span class="n">Value</span> <span class="mi">1</span> <span class="o">|</span> <span class="n">Value</span> <span class="mi">2</span> <span class="o">|</span> <span class="n">Value</span> <span class="mi">3</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">Value</span> <span class="mi">4</span> <span class="o">|</span> <span class="n">Value</span> <span class="mi">5</span> <span class="o">|</span> <span class="n">Value</span> <span class="mi">6</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">Value</span> <span class="mi">7</span> <span class="o">|</span> <span class="n">Value</span> <span class="mi">8</span> <span class="o">|</span> <span class="n">Value</span> <span class="mi">9</span> <span class="o">|</span>
+</pre></div>
+
+
+<p>Now generate the website and review the result.</p>
+<div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span>
+<span class="n">pelican</span> <span class="o">--</span><span class="n">listen</span>
+</pre></div>
+
+
+<p>The post we wrote shows the basics of how to use Markdown.  When the website was generated the Markdown was converted into HTML. HTML elements can be used when writing a markdown file but the markdown syntax is much simpler to write. Use of HTML should be the exception and not the rule.</p>
+<p><img alt="some text" src="/img/pelican_tutorial_5.png"></p>
+<p>Let's prepare to write our second post.  Download the python icon image we will be using by clicking on this <a href="/img/python_icon.png">link</a>.  Copy the image to the content folder as shown below.</p>
+<div class="highlight"><pre><span></span><span class="n">blog</span>
+<span class="err">└──</span> <span class="n">source</span>
+     <span class="err">├──</span> <span class="n">content</span>
+     <span class="o">|</span>   <span class="err">└──</span> <span class="n">first_post</span><span class="o">.</span><span class="n">md</span>
+     <span class="o">|</span>   <span class="err">└──</span> <span class="n">markdown_example_1</span><span class="o">.</span><span class="n">md</span>
+     <span class="o">|</span>   <span class="err">└──</span> <span class="n">python_icon</span><span class="o">.</span><span class="n">png</span> <span class="p">(</span><span class="n">new</span><span class="p">)</span>
+     <span class="err">├──</span> <span class="n">plugins</span>
+     <span class="err">└──</span> <span class="n">theme</span>
+</pre></div>
+
+
+<p>Create a file called <em>markdown_examples_2.md" in the same location as </em>first_post.md<em> and </em>markdown_examples_1.md*.  Insert the following text:</p>
+<div class="highlight"><pre><span></span><span class="nl">Title</span><span class="p">:</span> <span class="n">Markdown</span> <span class="n">Examples</span> <span class="n">Part</span> <span class="mi">2</span>
+<span class="nl">Author</span><span class="p">:</span> <span class="n">Matthew</span> <span class="n">Devaney</span>
+<span class="nl">Date</span><span class="p">:</span> <span class="mi">2019</span><span class="o">-</span><span class="mo">01</span><span class="o">-</span><span class="mo">03</span> <span class="mi">12</span><span class="o">:</span><span class="mo">00</span>
+<span class="nl">Category</span><span class="p">:</span> <span class="n">blogging</span>
+<span class="nl">Tags</span><span class="p">:</span> <span class="n">markdown</span>
+
+<span class="n">Images</span> <span class="n">can</span> <span class="n">be</span> <span class="n">displayed</span> <span class="k">in</span> <span class="n">Markdown</span><span class="p">.</span>  
+<span class="n">Text</span> <span class="n">within</span> <span class="n">the</span> <span class="n">square</span> <span class="n">brackets</span> <span class="n">is</span> <span class="n">the</span> <span class="n">image</span> <span class="n">name</span><span class="p">.</span> <span class="n">The</span> <span class="n">path</span> <span class="n">to</span> <span class="n">the</span> <span class="n">image</span> <span class="n">goes</span> <span class="n">between</span> <span class="n">the</span> <span class="n">round</span> <span class="n">brackets</span><span class="p">.</span>  
+<span class="n">The</span> <span class="p">{</span><span class="k">static</span><span class="p">}</span> <span class="n">indicates</span> <span class="n">the</span> <span class="n">image</span> <span class="n">is</span> <span class="n">stored</span> <span class="k">in</span> <span class="n">the</span> <span class="n">content</span> <span class="n">folder</span><span class="p">.</span> <span class="n">This</span> <span class="n">setting</span> <span class="n">can</span> <span class="n">be</span> <span class="n">changed</span> <span class="k">in</span> <span class="n">pelicanconf</span><span class="p">.</span><span class="n">py</span><span class="p">.</span>
+
+<span class="o">!</span><span class="p">[</span><span class="n">python</span> <span class="n">logo</span><span class="p">]({</span><span class="k">static</span><span class="p">}</span><span class="o">/</span><span class="n">python_icon</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+
+<span class="n">Links</span> <span class="n">to</span> <span class="n">downloadable</span> <span class="n">content</span> <span class="n">such</span> <span class="n">as</span> <span class="n">PDF</span> <span class="n">files</span> <span class="n">are</span> <span class="n">written</span> <span class="n">similarly</span> <span class="n">to</span> <span class="n">image</span> <span class="n">files</span> <span class="n">but</span> <span class="n">with</span> <span class="n">no</span> <span class="o">!</span> <span class="n">symbol</span> <span class="n">at</span> <span class="n">the</span> <span class="n">beginning</span><span class="p">.</span>
+
+<span class="p">[</span><span class="n">Pelican</span> <span class="n">Documenation</span><span class="p">]({</span><span class="k">static</span><span class="p">}</span><span class="o">/</span><span class="n">pelican</span><span class="p">.</span><span class="n">pdf</span><span class="p">)</span>
+
+<span class="n">A</span> <span class="n">link</span> <span class="n">to</span> <span class="n">a</span> <span class="n">different</span> <span class="n">blog</span> <span class="n">post</span> <span class="n">on</span> <span class="n">our</span> <span class="n">website</span> <span class="n">is</span> <span class="n">written</span> <span class="n">exactly</span> <span class="n">the</span> <span class="n">same</span><span class="p">.</span>  
+<span class="n">Text</span> <span class="n">within</span> <span class="n">the</span> <span class="n">square</span> <span class="n">brackets</span> <span class="n">can</span> <span class="n">be</span> <span class="n">clicked</span> <span class="n">on</span> <span class="n">to</span> <span class="n">travel</span> <span class="n">to</span> <span class="n">the</span> <span class="n">website</span> <span class="n">between</span> <span class="n">the</span> <span class="n">curly</span> <span class="n">brackets</span><span class="p">.</span>
+
+<span class="p">[</span><span class="n">First</span> <span class="n">Post</span><span class="p">]({</span><span class="k">static</span><span class="p">}</span><span class="o">/</span><span class="n">first_post</span><span class="p">.</span><span class="n">md</span><span class="p">)</span>
+
+<span class="n">Or</span> <span class="n">we</span> <span class="n">can</span> <span class="n">link</span> <span class="n">to</span> <span class="n">another</span> <span class="n">external</span> <span class="n">website</span> <span class="n">by</span> <span class="n">supplying</span> <span class="n">the</span> <span class="n">web</span> <span class="n">address</span><span class="p">.</span>
+
+<span class="p">[</span><span class="n">Python</span> <span class="n">Package</span> <span class="n">Index</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//pypi.org)</span>
+</pre></div>
+
+
+<p>Regenerate the website and review the result.</p>
+<div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span>
+<span class="n">pelican</span> <span class="o">--</span><span class="n">listen</span>
+</pre></div>
+
+
+<p><img alt="some text" src="/img/pelican_tutorial_6.png"></p>
+<p>For our final blog post we will write some code. Pelican displays code blocks using the popular <a href="https://pygments.org">Pygments</a> snytax highlighter. You will recall we setup the Pygments <a href="https://help.farbox.com/pygments.html">theme</a> 'monokai' in <em>pelicanconf.py</em> earlier.  Also, Pygments is not limited to only Python.  It can handle almost any language you can think of. Check out the list of supported languages <a href="http://pygments.org/languages/">here</a>. </p>
+<p>Create a file called *markdown_examples_3.md" in the content folder.  Insert the following text:</p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="p">:</span> <span class="n">Markdown</span> <span class="n">Examples</span> <span class="n">Part</span> <span class="mi">3</span>
+<span class="n">Author</span><span class="p">:</span> <span class="n">Matthew</span> <span class="n">Devaney</span>
+<span class="n">Date</span><span class="p">:</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">04</span> <span class="mi">12</span><span class="p">:</span><span class="mi">00</span>
+<span class="n">Category</span><span class="p">:</span> <span class="n">blogging</span>
+<span class="n">Tags</span><span class="p">:</span> <span class="n">markdown</span><span class="p">,</span> <span class="n">pygments</span>
+
+<span class="n">Code</span> <span class="n">blocks</span> <span class="n">are</span> <span class="n">preceeded</span> <span class="n">by</span> <span class="n">an</span> <span class="n">indent</span><span class="p">,</span> <span class="n">three</span> <span class="p">:</span> <span class="n">symbols</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">language</span><span class="o">.</span>  
+<span class="n">All</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">code</span> <span class="n">will</span> <span class="n">be</span> <span class="n">highlighted</span> <span class="k">while</span> <span class="n">the</span> <span class="n">text</span> <span class="ow">is</span> <span class="n">indented</span><span class="o">.</span>
+
+    <span class="p">:::</span><span class="n">python3</span>
+    <span class="k">def</span> <span class="nf">do_twice</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper_do_twice</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">wrapper_do_twice</span>
+
+    <span class="nd">@do_twice</span>
+    <span class="k">def</span> <span class="nf">say_whee</span><span class="p">(</span><span class="n">some_text</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">some_text</span><span class="p">)</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Whee!&#39;</span>
+    <span class="n">say_whee</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Generate the site one more time and view the result</p>
+<div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span>
+<span class="n">pelican</span> <span class="o">--</span><span class="n">listen</span>
+</pre></div>
+
+
+<p><img alt="some text" src="/img/pelican_tutorial_7.png"></p>
             </div>
             <!-- /.entry-content -->
         </article>
