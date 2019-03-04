@@ -61,9 +61,11 @@ sup{
 sub{
     bottom:-0.25em
 }
-img{
+/* changed from border:0 */
+img {
     border:0
 }
+
 svg:not(:root){
     overflow:hidden
 }
@@ -5781,6 +5783,14 @@ input:focus,.form-control:focus{
 .panel-default .panel-heading,.panel-default .panel-title,.panel-default .panel-footer{
     color:#98978b
 }
+
+/* custom css */
+
 .title a{
     color:#3e3f3a;
+}
+
+.entry-content img{
+    border: 1px solid #cccccc;
+    border-radius: 4px;
 }
