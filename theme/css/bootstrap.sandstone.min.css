@@ -1128,8 +1128,10 @@ h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,.h1 small,.h2 small,.h3 sm
     line-height:1;
     color:#98978b
 }
+/* changed margin top from 20px */
+
 h1,.h1,h2,.h2,h3,.h3{
-    margin-top:20px;
+    margin-top:40px;
     margin-bottom:10px
 }
 h1 small,.h1 small,h2 small,.h2 small,h3 small,.h3 small,h1 .small,.h1 .small,h2 .small,.h2 .small,h3 .small,.h3 .small{
@@ -1270,9 +1272,10 @@ a.bg-warning:hover{
 a.bg-danger:hover{
     background-color:#e4b9b9
 }
+/* changed margin from margin:40px 0 10px */
 .page-header{
     padding-bottom:9px;
-    margin:40px 0 20px;
+    margin:40px 0 0 0;
     border-bottom:1px solid #f8f5f0
 }
 ul,ol{
