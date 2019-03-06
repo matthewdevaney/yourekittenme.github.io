@@ -143,6 +143,22 @@ Matthew Devaney            </a>
 <p><img alt="some text" src="/img/google_domains_tutorial_7.png"></p>
 <p>Our website is now setup to be served from <em>yourdomain.com</em>.  The changes will not take effect immediately but after a few minutes we should be able to access our website from <em>yourdomain.com</em>.  Also try browsing to username.github.io and you will notice the web address is redirected to <em>yourdomain.com</em></p>
 <p><img alt="some text" src="/img/google_domains_tutorial_8.png"></p>
+<h3>Configuring Git</h3>
+<p>When we added the CNAME file to our remote repository on Github it went out of sync with the repo on our local machine.  Open up the command line type the following command while in the <em>blog/output</em> folder.</p>
+<div class="highlight"><pre><span></span>git pull
+</pre></div>
+
+
+<p>The CNAME file is now added the local repository.  This creates another issue: when we generate the website in Pelican the output folder gets deleted before it is loaded with new files.  We need to create an exception for CNAME to avoid this.  Open <em>pelicanconf.py</em> in the source folder and add the following lines:</p>
+<div class="highlight"><pre><span></span><span class="n">DELETE_OUTPUT_DIRECTORY</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">OUTPUT_RETENTION</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CNAME&#39;</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Test the new settings to ensure they work.  When we generate the website CNAME should remain intact in the <em>output</em> folder.</p>
+<div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span>
+<span class="n">pelican</span> <span class="o">--</span><span class="n">listen</span>
+</pre></div>
             </div>
             <!-- /.entry-content -->
         </article>
