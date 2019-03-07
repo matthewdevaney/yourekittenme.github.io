@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Deploying A Static Website To Github Pages - Matthew Devaney</title>
+    <title>Google Analytics With Pelican - Matthew Devaney</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,23 +9,21 @@
 
 
 
-<link rel="canonical" href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/">
+<link rel="canonical" href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/">
 
         <meta name="author" content="Matthew Devaney" />
-        <meta name="keywords" content="github,git,pelican,website deployment" />
-        <meta name="description" content="So you&#39;ve built a static website and you want to share it with the world. Now you just need to get it up and running on the web. After doing some research you realize there are so many options for deployment and everyone has their own opinion. How do I …" />
+        <meta name="keywords" content="google analytics,pelican" />
+        <meta name="description" content="Who is visiting your website? Where are they coming from? What content are they engaging with and why? These are all questions you need a web analytics service to answer. Google Analytics is the most widely used web analytics on the internet. At its most basic the service tracks and …" />
 
         <meta property="og:site_name" content="Matthew Devaney" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Deploying A Static Website To Github Pages"/>
-        <meta property="og:url" content="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/"/>
-        <meta property="og:description" content="So you&#39;ve built a static website and you want to share it with the world. Now you just need to get it up and running on the web. After doing some research you realize there are so many options for deployment and everyone has their own opinion. How do I …"/>
-        <meta property="article:published_time" content="2019-03-10" />
+        <meta property="og:title" content="Google Analytics With Pelican"/>
+        <meta property="og:url" content="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"/>
+        <meta property="og:description" content="Who is visiting your website? Where are they coming from? What content are they engaging with and why? These are all questions you need a web analytics service to answer. Google Analytics is the most widely used web analytics on the internet. At its most basic the service tracks and …"/>
+        <meta property="article:published_time" content="2019-03-17" />
             <meta property="article:section" content="Web Development" />
-            <meta property="article:tag" content="github" />
-            <meta property="article:tag" content="git" />
+            <meta property="article:tag" content="google analytics" />
             <meta property="article:tag" content="pelican" />
-            <meta property="article:tag" content="website deployment" />
             <meta property="article:author" content="Matthew Devaney" />
 
 
@@ -94,14 +92,14 @@ Matthew Devaney            </a>
         <article>
             <header class="page-header">
                 <h1>
-                        <img src="\img\github_icon.png">
-                    Deploying A Static Website To Github Pages
+                        <img src="\img\google_icon.png">
+                    Google Analytics With Pelican
                 </h1>
                 <div class="panel-body">
 <footer class="post-info">
     <span class="published">
         <!-- deleted <i class="fa fa-calendar"></i> -->
-        <time datetime="2019-03-10T12:00:00-05:00"> March 10, 2019</time>
+        <time datetime="2019-03-17T12:00:00-05:00"> March 17, 2019</time>
     </span>
 
 
@@ -113,17 +111,11 @@ Matthew Devaney            </a>
 
 <!-- <span class="label label-default">Tags</span> -->
 , Tags:
-	<!-- <a href="https://matthewdevaney.com, tag/github">github</a> -->
-    <a href="https://matthewdevaney.com/tag/github">github</a>
-        ,
-	<!-- <a href="https://matthewdevaney.com, tag/git">git</a> -->
-    <a href="https://matthewdevaney.com/tag/git">git</a>
+	<!-- <a href="https://matthewdevaney.com, tag/google-analytics">google analytics</a> -->
+    <a href="https://matthewdevaney.com/tag/google-analytics">google analytics</a>
         ,
 	<!-- <a href="https://matthewdevaney.com, tag/pelican">pelican</a> -->
     <a href="https://matthewdevaney.com/tag/pelican">pelican</a>
-        ,
-	<!-- <a href="https://matthewdevaney.com, tag/website-deployment">website deployment</a> -->
-    <a href="https://matthewdevaney.com/tag/website-deployment">website deployment</a>
     
 </footer><!-- /.post-info -->                </div>
             </header>
@@ -131,63 +123,35 @@ Matthew Devaney            </a>
                 <div class="panel">
                     <!-- div panel-body was here -->
                 </div>
-                <p>So you've built a static website and you want to share it with the world. Now you just need to get it up and running on the web.  After doing some research you realize there are so many options for deployment and everyone has their own opinion.  How do I choose the best method?  Where can I find instructions?  It all seems so overwhelming.  At least that's how it felt for me.</p>
-<p>There are a few reasons I like Github Pages for the task of hosting a small static website.  The service is free (as in beer), its reliable and I already use Github repositories to store the source code for my software projects so the workflow comes naturally.  </p>
-<p>The second is, it's free (as in beer).</p>
-<p>In this tutorial I will show you a simple method for deploying your own static website and its source code to Github Pages.  If you don't know how to build a static website and want to learn consider checking out the previous lessons on Pelican <a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/">installation and themes</a> and <a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/">writing content</a>.</p>
+                <p>Who is visiting your website?  Where are they coming from?  What content are they engaging with and why?  These are all questions you need a web analytics service to answer.  <a href="https://analytics.google.com/analytics/web/">Google Analytics</a> is the most widely used web analytics on the internet.  At its most basic the service tracks and reports on website traffic.  However, this is just the beginning of what Google Analytics can do and a smart website owner will use it not just to count page visits but how to drive more.</p>
+<p>In this mini-tutorial I will show you how to install Google Analytics on a static website created with Pelican.</p>
 <h4>Prequisites</h4>
-<p>A basic understanding of the <a href="https://git-scm.com/">Git</a> and <a href="https://github.com/">Github</a> is required.  You will also need to sign up for a free Github account if you don't already have one.</p>
+<p>You will need to sign-up for a Google account and activate Google Analytics</p>
 <h4>Goals</h4>
 <ul>
-<li>Create Github repositories for your static website and its source code.</li>
-<li>Go-live with your website on Github Pages</li>
+<li>Implement the Google Analytics on all website pages</li>
 </ul>
-<h3>Deployment To Github Pages</h3>
-<p>When building a static website it is a good idea to keep your website and its source code in two separate folders.  To make things simple let's call the folders output and source just like the website in my Pelican tutorial.</p>
-<div class="highlight"><pre><span></span>blog
-└── output
-└── source
+<h3>Installing Google Analytics</h3>
+<p>Sign-in to Google Analytics and click the gear icon to open up the settings menu.  Click on the create property button.</p>
+<p><img alt="some text" src="https://matthewdevaney.com/img/google_analytics_tutorial_1.png"></p>
+<p>Fill-in all of the required information in the new property form.  Ensure the website URL you enter is exactly the same as the domain which hosts our blog.  Click the get tracking ID button when done.</p>
+<p><img alt="some text" src="https://matthewdevaney.com/img/google_analytics_tutorial_3.png"></p>
+<p>Make a note of the tracking ID that was generated for the website.  We will be including it in our Pelican settings.</p>
+<p><img alt="some text" src="https://matthewdevaney.com/img/google_analytics_tutorial_4.png"></p>
+<p>Google Analytics only works on our published Pelican website.  Open <em>publishconf.py</em> and uncomment the GOOGLE_ANALYTICS variable.  Replace the tracking id below with your own.</p>
+<div class="highlight"><pre><span></span><span class="n">GOOGLE_ANALYTICS</span> <span class="o">=</span> <span class="s1">&#39;UA-135011604-2&#39;</span>
 </pre></div>
 
 
-<p>We are going to create two Github repositories: one to hold the static website and another to hold its source code.  The repository for the output folder must follow the pattern <em>username.github.io</em>.  This is how Github knows how to display the repo's contents as a website.  The repository for the source folder can have any name we would like.  We will use the repo name <em>blog_source</em>.</p>
-<div class="highlight"><pre><span></span>blog
-└── output (repo: username.github.io)
-└── source (repo: blog_source)
-</pre></div>
-
-
-<p>Login to Github and create a new repository called <em>username.github.io</em>.  Replace the word username with your actual Github user name.  Make the website public and do not initialize it with a readme file.</p>
-<p><img alt="some text" src="https://matthewdevaney.com/img/github_pages_tutorial_1.png"></p>
-<p>Immediately create a second repository called <em>blog_source</em> as well using the same settings as the first.  Now we have two empty Github repositories.</p>
-<p><img alt="some text" src="https://matthewdevaney.com/img/github_pages_tutorial_2.png"></p>
-<p>Open up the command line.  If you are following along from a previous tutorial we should generate the website prior to deployment.  Generate the website using the command below.  We append -s publishconf.py to use settings that should only be applied when the website is being published.</p>
+<p>Now generate the website using publishconf.py</p>
 <div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span> <span class="o">-</span><span class="n">s</span> <span class="n">publishconf</span><span class="o">.</span><span class="n">py</span>
+<span class="n">pelican</span> <span class="o">--</span><span class="n">listen</span>
 </pre></div>
 
 
-<p>Now its time to use Git.  While in the <em>blog/output</em> folder run the following git commands in order to push our files to the yourekittenme.github.io repository.</p>
-<div class="highlight"><pre><span></span>git init
-git remote add origin https://github.com/yourekittenme/yourekittenme.github.io
-git add -A
-git commit -m &quot;initial commit&quot;
-git push --set-upstream origin master
-</pre></div>
-
-
-<p>Next, navigate to the <em>blog/source</em> folder run the following git commands in order to push our files to the blog_source repository:</p>
-<div class="highlight"><pre><span></span>git init
-git remote add origin https://github.com/yourekittenme/code_blog
-git add -A
-git commit -m &quot;initial commit&quot;
-git push --set-upstream origin master
-</pre></div>
-
-
-<p>After running both sequences of Git commands we should be able to see our files loaded inti their respective repositories on Github.  To view our website type https://username.github.io into your web browser.</p>
-<p><img alt="some text" src="https://matthewdevaney.com/img/github_pages_tutorial_3.png"></p>
-<h3>Next Steps</h3>
-<p>We have now successfully deployed the static website.  Optionally, we can use a custom domain to replace username.github.io.  If you would like to see how that's done follow along to the next tutorial on <a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/">custom domains</a>.  Or, skip it and complete the <a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-with-pelican/">Disqus comments</a> and <a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/">Google Analytics</a> mini-tutorials instead.</p>
+<p>Once we upload the generated website to our host the Google Analytics service will begin tracking our website.</p>
+<h3>Conclusion</h3>
+<p>If you've been following along from the <a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/">beginning</a> we have now successfully installed Pelican, deployed a static blog to Github and even installed some 3rd party services to add extra functionality.  I hope you've enjoyed working through this tutorial with me and I wish you the best on your web development journey with Python.</p>
 <h3>Series</h3>
 <p>This article is part of a series of tutorials that will show you how to create static websites with Python and Pelican</p>
 <ul>
@@ -212,8 +176,8 @@ git push --set-upstream origin master
             var disqus_config = function () {
                 this.language = "en";
 
-                        this.page.identifier = '2019-03-10-deploying-a-static-website-to-github-pages';
-                        this.page.url = 'https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/';
+                        this.page.identifier = '2019-03-17-google-analytics-with-pelican';
+                        this.page.url = 'https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/';
             };
 
             /* * * DON'T EDIT BELOW THIS LINE * * */

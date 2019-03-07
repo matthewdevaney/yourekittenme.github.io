@@ -9,7 +9,7 @@
 
 
 
-<link rel="canonical" href="/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/">
+<link rel="canonical" href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/">
 
         <meta name="author" content="Matthew Devaney" />
         <meta name="keywords" content="python,pelican,markdown" />
@@ -18,7 +18,7 @@
         <meta property="og:site_name" content="Matthew Devaney" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="Build A Blog With Python And Pelican - Pt. 2 Creating Content"/>
-        <meta property="og:url" content="/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"/>
+        <meta property="og:url" content="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"/>
         <meta property="og:description" content="Static website generators take content stored in a plain-text format, apply it to an HTML template and render all of the files required to build the website. In the previous tutorial we installed a theme which included templates. Now we will learn how to write the content for our blog …"/>
         <meta property="article:published_time" content="2019-03-07" />
             <meta property="article:section" content="Web Development" />
@@ -30,16 +30,18 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.sandstone.min.css" type="text/css"/>
-    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://matthewdevaney.com/theme/css/bootstrap.sandstone.min.css" type="text/css"/>
+    <link href="https://matthewdevaney.com/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/bw.css" rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+    <link href="https://matthewdevaney.com/theme/css/pygments/bw.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://matthewdevaney.com/theme/css/style.css" type="text/css"/>
 
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="https://matthewdevaney.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Matthew Devaney ATOM Feed"/>
 
-        <link href="/feeds/web-development.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="https://matthewdevaney.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
+              title="Matthew Devaney RSS Feed"/>
+        <link href="https://matthewdevaney.com/feeds/web-development.atom.xml" type="application/atom+xml" rel="alternate"
               title="Matthew Devaney Web Development ATOM Feed"/>
 </head>
 <body>
@@ -53,16 +55,23 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand">
+            <a href="https://matthewdevaney.com/" class="navbar-brand">
 Matthew Devaney            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="/pages/about-me/">
+                         <li><a href="https://matthewdevaney.com/pages/about-me/">
                              About Me
                           </a></li>
 
 
+
+
+                <!-- Sidebar/Links -->
+                        <li>
+                          <a href="feeds/all.atom.xml" target="_blank">RSS</a>
+                        </li>
+                <!-- End Sidebar/Links -->
 
 
             </ul>
@@ -98,19 +107,19 @@ Matthew Devaney            </a>
 
         <!-- deleted <span class="label label-default">Category</span> -->
         , Category:
-        <a href="/category/web-development">Web Development</a>
+        <a href="https://matthewdevaney.com/category/web-development">Web Development</a>
 
 
 <!-- <span class="label label-default">Tags</span> -->
 , Tags:
-	<!-- <a href=", tag/python">python</a> -->
-    <a href="/tag/python">python</a>
+	<!-- <a href="https://matthewdevaney.com, tag/python">python</a> -->
+    <a href="https://matthewdevaney.com/tag/python">python</a>
         ,
-	<!-- <a href=", tag/pelican">pelican</a> -->
-    <a href="/tag/pelican">pelican</a>
+	<!-- <a href="https://matthewdevaney.com, tag/pelican">pelican</a> -->
+    <a href="https://matthewdevaney.com/tag/pelican">pelican</a>
         ,
-	<!-- <a href=", tag/markdown">markdown</a> -->
-    <a href="/tag/markdown">markdown</a>
+	<!-- <a href="https://matthewdevaney.com, tag/markdown">markdown</a> -->
+    <a href="https://matthewdevaney.com/tag/markdown">markdown</a>
     
 </footer><!-- /.post-info -->                </div>
             </header>
@@ -120,7 +129,7 @@ Matthew Devaney            </a>
                 </div>
                 <p>Static website generators take content stored in a plain-text format, apply it to an HTML template and render all of the files required to build the website.  In the previous tutorial we installed a theme which included templates.  Now we will learn how to write the content for our blog, store content, and keep it all organized.</p>
 <h4>Prequisites</h4>
-<p>This is the 2nd tutorial in a series on how to build a static website with Pelican.  If you haven't already done so go back to <a href="/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/">Part 1</a> and start from the beginning.</p>
+<p>This is the second tutorial in a series on how to build a static website with Pelican.  If you haven't already done so go back to the first tutorial to learn how to <a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/">install Pelican and themes</a>.</p>
 <h4>Goals</h4>
 <ul>
 <li>Create articles and pages with Markdown</li>
@@ -219,7 +228,7 @@ Matthew Devaney            </a>
 </pre></div>
 
 
-<p><img alt="some text" src="/img/pelican_tutorial_4.png"></p>
+<p><img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_4.png"></p>
 <p>Now we will use Markdown to write our post's content. Markdown is a language written for non-programmers that uses symbols to represent HTML.  We apply markdown to a plain text file with the extension .md to do things link change the style (e.g. bold, italics), insert pictures and create links.  When we use Pelican to generate our website it will read the markdown file and convert it to HTML.</p>
 <p>Anyone can learn the basics of Markdown in about 10 minutes.  The language's syntax is very well documented on the web so we will not discuss it in full detail here.  Instead we will review a few sample posts to understand the basics which will include examples specific to Pelican.  I recommend you check out either the <a href="https://www.markdownguide.org/">interactive tutorial</a> at markdownguide.org or Adam Pritchard's <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> on Github before moving on with the tutorial.</p>
 <p>Create a file called <em>markdown_examples_1.md" in the same location as </em>first_post.md*.  Insert the following text:</p>
@@ -275,8 +284,8 @@ Matthew Devaney            </a>
 
 
 <p>The post we wrote shows the basics of how to use Markdown.  When the website was generated the Markdown was converted into HTML. HTML elements can be used when writing a markdown file but the markdown syntax is much simpler to write. Use of HTML should be the exception and not the rule.</p>
-<p><img alt="some text" src="/img/pelican_tutorial_5.png"></p>
-<p>Let's prepare to write our second post.  Download the python icon image we will be using by clicking on this <a href="/img/python_icon.png">link</a>.  Copy the image to the content folder as shown below.</p>
+<p><img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_5.png"></p>
+<p>Let's prepare to write our second post.  Download the python icon image we will be using by clicking on this <a href="https://matthewdevaney.com/img/python_icon.png">link</a>.  Copy the image to the content folder as shown below.</p>
 <div class="highlight"><pre><span></span>blog
 └── source
      ├── content
@@ -323,7 +332,7 @@ Matthew Devaney            </a>
 </pre></div>
 
 
-<p><img alt="some text" src="/img/pelican_tutorial_6.png"></p>
+<p><img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_6.png"></p>
 <p>For our final blog post we will write a Python code block. Pelican displays code blocks using the popular <a href="https://pygments.org">Pygments</a> snytax highlighter. You will recall we setup the Pygments <a href="https://help.farbox.com/pygments.html">theme</a> 'monokai' in <em>pelicanconf.py</em> earlier.  Also, Pygments is not limited to only Python.  It can handle almost any language you can think of. Check out the list of supported languages <a href="http://pygments.org/languages/">here</a>. </p>
 <p>Create a file called *markdown_examples_3.md" in the content folder.  Insert the following text:</p>
 <div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">Markdown</span> <span class="n">Examples</span> <span class="n">Part</span> <span class="mi">3</span>
@@ -356,7 +365,7 @@ Matthew Devaney            </a>
 </pre></div>
 
 
-<p><img alt="some text" src="/img/pelican_tutorial_7.png"></p>
+<p><img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_7.png"></p>
 <h3>Writing Pages vs. Articles</h3>
 <p>Written content in Pelican takes one of two forms: <em>articles</em> or <em>pages</em>.  Articles are frequently updated content that can be ordered by date.  Our blog posts are all examples of articles.  Pages are more permanent in nature and are not associated with dates such as an <em>about me</em> page.  They only appear on the navigation bar of our blog and not the list of recent posts.  We are going to make an <em>about me</em> page for our blog.</p>
 <p>Pelican determines which content is pages vs. articles based on where it is located in the filesystem.  Make a new folder called <em>pages</em> within the content folder and then create a new markdown file <em>about_me</em> as shown below.</p>
@@ -384,7 +393,7 @@ Matthew Devaney            </a>
 </pre></div>
 
 
-<p><img alt="some text" src="/img/pelican_tutorial_8.png"></p>
+<p><img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_8.png"></p>
 <h3>Keeping The Content Folder Organized</h3>
 <p>A small content-oriented website such as our blog can quickly grow into a large website as time goes on.  Organizing the file structure of our website in a logical manner will help us minimize the difficulty of maintaining our blog, leaving us more time to spend productively on creating new content.  Look at the diagram below which shows our current setup of the content folder.  A flat file structure like this one might be fine to use for a blog with 10 posts but it would become significantly harder after 100 posts.</p>
 <div class="highlight"><pre><span></span>blog
@@ -512,7 +521,17 @@ Matthew Devaney            </a>
 
 
 <h3>Next Steps</h3>
-<p>In this tutorial we learned how to write new articles and pages using Markdown, keep the content folder organized and define the URL structure of our website.  We are finally ready to deploy our site to the web and share it with others.  Check out my tutorial on <a href="/posts/2019/03/10/deploying-a-static-website-to-github-pages/">Deployment to Github Pages</a> for more details.</p>
+<p>In this tutorial we learned how to write new articles and pages using Markdown, keep the content folder organized and define the URL structure of our website.  We are finally ready to deploy our site to the web and share it with others.  Check out the next tutorial on <a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/">Deployment to Github Pages</a> for more details.</p>
+<h3>Series</h3>
+<p>This article is part of a series of tutorials that will show you how to create static websites with Python and Pelican</p>
+<ul>
+<li><a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/">Build A Blog With Python And Pelican - Installation And Theme</a></li>
+<li><a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/">Build A Blog With Python And Pelican - Content</a></li>
+<li><a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/">Deploying A Static Website To Github Pages</a></li>
+<li><a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/">Custom Domains With Github Pages And Google Domains</a></li>
+<li><a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-with-pelican/">Disqus Comments With Pelican</a></li>
+<li><a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/">Google Analytics With Pelican</a> mini-tutorials instead.</li>
+</ul>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -528,6 +547,7 @@ Matthew Devaney            </a>
                 this.language = "en";
 
                         this.page.identifier = '2019-03-07-build-a-blog-with-python-and-pelican-pt-2-creating-content';
+                        this.page.url = 'https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/';
             };
 
             /* * * DON'T EDIT BELOW THIS LINE * * */
@@ -564,13 +584,13 @@ Matthew Devaney            </a>
       </div>
    </div>
 </footer>
-<script src="/theme/js/jquery.min.js"></script>
+<script src="https://matthewdevaney.com/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
+<script src="https://matthewdevaney.com/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
+<script src="https://matthewdevaney.com/theme/js/respond.min.js"></script>
 
 
     <!-- Disqus -->
