@@ -1,5 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Matthew Devaney - Web Development</title><link href="/" rel="alternate"></link><link href="/feeds/web-development.atom.xml" rel="self"></link><id>/</id><updated>2019-03-12T12:00:00-05:00</updated><entry><title>Custom Domains With Github Pages And Google Domains</title><link href="/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/" rel="alternate"></link><published>2019-03-12T12:00:00-05:00</published><updated>2019-03-12T12:00:00-05:00</updated><author><name>Matthew Devaney</name></author><id>tag:None,2019-03-12:/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/</id><summary type="html">&lt;p&gt;Which web address would you rather own: &lt;em&gt;yourdomain.github.io&lt;/em&gt; or &lt;em&gt;yourdomain.com&lt;/em&gt;?  The answer is simple: &lt;em&gt;yourdomain.com&lt;/em&gt;.  If you are hosting your website on a free service such as &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; you'll be assigned the former, not the latter.  Fortunately domain names are inexpensive to purchase (if they …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Which web address would you rather own: &lt;em&gt;yourdomain.github.io&lt;/em&gt; or &lt;em&gt;yourdomain.com&lt;/em&gt;?  The answer is simple: &lt;em&gt;yourdomain.com&lt;/em&gt;.  If you are hosting your website on a free service such as &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; you'll be assigned the former, not the latter.  Fortunately domain names are inexpensive to purchase (if they are available).  Depending on the provider the annual cost is usually between $10-20.  When comparing the amount you'll spend vs. the benefits you'll receive its easy to justify purchase your own domain.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Matthew Devaney - Web Development</title><link href="https://matthewdevaney.com/" rel="alternate"></link><link href="https://matthewdevaney.com/feeds/web-development.atom.xml" rel="self"></link><id>https://matthewdevaney.com/</id><updated>2019-03-17T12:00:00-05:00</updated><entry><title>Google Analytics With Pelican</title><link href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/" rel="alternate"></link><published>2019-03-17T12:00:00-05:00</published><updated>2019-03-17T12:00:00-05:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-03-17:/posts/2019/03/17/google-analytics-with-pelican/</id><summary type="html">&lt;p&gt;Who is visiting your website?  Where are they coming from?  What content are they engaging with and why?  These are all questions you need a web analytics service to answer.  &lt;a href="https://analytics.google.com/analytics/web/"&gt;Google Analytics&lt;/a&gt; is the most widely used web analytics on the internet.  At its most basic the service tracks and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Who is visiting your website?  Where are they coming from?  What content are they engaging with and why?  These are all questions you need a web analytics service to answer.  &lt;a href="https://analytics.google.com/analytics/web/"&gt;Google Analytics&lt;/a&gt; is the most widely used web analytics on the internet.  At its most basic the service tracks and reports on website traffic.  However, this is just the beginning of what Google Analytics can do and a smart website owner will use it not just to count page visits but how to drive more.&lt;/p&gt;
+&lt;p&gt;In this mini-tutorial I will show you how to install Google Analytics on a static website created with Pelican.&lt;/p&gt;
+&lt;h4&gt;Prequisites&lt;/h4&gt;
+&lt;p&gt;You will need to sign-up for a Google account and activate Google Analytics&lt;/p&gt;
+&lt;h4&gt;Goals&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement the Google Analytics on all website pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Installing Google Analytics&lt;/h3&gt;
+&lt;p&gt;Sign-in to Google Analytics and click the gear icon to open up the settings menu.  Click on the create property button.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_analytics_tutorial_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;Fill-in all of the required information in the new property form.  Ensure the website URL you enter is exactly the same as the domain which hosts our blog.  Click the get tracking ID button when done.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_analytics_tutorial_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;Make a note of the tracking ID that was generated for the website.  We will be including it in our Pelican settings.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_analytics_tutorial_4.png"&gt;&lt;/p&gt;
+&lt;p&gt;Google Analytics only works on our published Pelican website.  Open &lt;em&gt;publishconf.py&lt;/em&gt; and uncomment the GOOGLE_ANALYTICS variable.  Replace the tracking id below with your own.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;UA-135011604-2&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now generate the website using publishconf.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;listen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once we upload the generated website to our host the Google Analytics service will begin tracking our website.&lt;/p&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;If you've been following along from the &lt;a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;beginning&lt;/a&gt; we have now successfully installed Pelican, deployed a static blog to Github and even installed some 3rd party services to add extra functionality.  I hope you've enjoyed working through this tutorial with me and I wish you the best on your web development journey with Python.&lt;/p&gt;
+&lt;h3&gt;Series&lt;/h3&gt;
+&lt;p&gt;This article is part of a series of tutorials that will show you how to create static websites with Python and Pelican&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;Build A Blog With Python And Pelican - Installation And Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;Build A Blog With Python And Pelican - Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/"&gt;Deploying A Static Website To Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/"&gt;Custom Domains With Github Pages And Google Domains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-on-a-static-website/"&gt;Disqus Comments With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"&gt;Google Analytics With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="google analytics"></category><category term="pelican"></category></entry><entry><title>Disqus Comments On A Static Website</title><link href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-on-a-static-website/" rel="alternate"></link><published>2019-03-15T12:00:00-05:00</published><updated>2019-03-15T12:00:00-05:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-03-15:/posts/2019/03/15/disqus-comments-on-a-static-website/</id><summary type="html">&lt;p&gt;Building a comment system on a static website is not possible: there's no database back-end to host one.  You can implement comments on your website but the trick is to use a service that will host it for you.  &lt;a href="https://disqus.com/"&gt;Disqus&lt;/a&gt; is a popular solution to this problem.  Small websites can …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Building a comment system on a static website is not possible: there's no database back-end to host one.  You can implement comments on your website but the trick is to use a service that will host it for you.  &lt;a href="https://disqus.com/"&gt;Disqus&lt;/a&gt; is a popular solution to this problem.  Small websites can use the service for free and installation/maintenance is quite painless. Another interesting feature is Disqus users can comment on your website and others using the same account.  The catch is you have to pay a fee if you don't want ads served to your visitors and beyond a certain-level of traffic upgrading to pro is mandatory.  If you can accept the trade-offs I believe Disqus is an excellent way to get the conversation started on your website.&lt;/p&gt;
+&lt;p&gt;In this mini-tutorial I will show you how to install Disqus on a static website created with Pelican.&lt;/p&gt;
+&lt;h4&gt;Prequisites&lt;/h4&gt;
+&lt;p&gt;You will need to sign up for the free version of Disqus&lt;/p&gt;
+&lt;h4&gt;Goals&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Allow comments using Disqus on your article pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Installing Disqus&lt;/h3&gt;
+&lt;p&gt;Once you have signed up for a Disqus account the go ahead and create a new site.  Make a note of the new unique Disqus URL that will be generated.  We will be adding it our Pelican settings file in a few moments.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/disqus_tutorial_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;Select the basic plan from the list of plans.  Its free and you can always upgrade later in needed.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/disqus_tutorial_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;When prompted to select a platform choose I don't see my platform listed.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/disqus_tutorial_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;Fill-in our website URL on the configuration screen and complete the form.  If you don't want go through all the settings now that's OK.  You can come back and finish setup later.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/disqus_tutorial_4.png"&gt;&lt;/p&gt;
+&lt;p&gt;Disqus comments will only appear on our published Pelican website.  Open &lt;em&gt;publishconf.py&lt;/em&gt; and uncomment the DISQUS_SITENAME variable.  Replace the Disqus site name below with your own.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;youre-kitten-mes-blog&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now generate the website using publishconf.py&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;listen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Open up the website in your browser and browse to an article.  Disqus comments will load at the bottom of the page.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/disqus_tutorial_5.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Next Steps&lt;/h3&gt;
+&lt;p&gt;Only one more lesson to go!  Complete the &lt;a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"&gt;Google Analytics&lt;/a&gt; mini-tutorial to learn how to track how visitors are findng and using your webpage.&lt;/p&gt;
+&lt;h3&gt;Series&lt;/h3&gt;
+&lt;p&gt;This article is part of a series of tutorials that will show you how to create static websites with Python and Pelican&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;Build A Blog With Python And Pelican - Installation And Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;Build A Blog With Python And Pelican - Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/"&gt;Deploying A Static Website To Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/"&gt;Custom Domains With Github Pages And Google Domains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-on-a-static-website/"&gt;Disqus Comments With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"&gt;Google Analytics With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="disqus"></category><category term="pelican"></category></entry><entry><title>Custom Domains With Github Pages And Google Domains</title><link href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/" rel="alternate"></link><published>2019-03-12T12:00:00-05:00</published><updated>2019-03-12T12:00:00-05:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-03-12:/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/</id><summary type="html">&lt;p&gt;Which web address would you rather own: yourdomain.github.io or yourdomain.com?  The answer is simple: yourdomain.com.  If you are hosting your website on a free service such as &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; you'll be assigned the former, not the latter.  Fortunately domain names are inexpensive to purchase (if they …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Which web address would you rather own: yourdomain.github.io or yourdomain.com?  The answer is simple: yourdomain.com.  If you are hosting your website on a free service such as &lt;a href="https://pages.github.com/"&gt;Github Pages&lt;/a&gt; you'll be assigned the former, not the latter.  Fortunately domain names are inexpensive to purchase (if they are available).  Depending on the provider the annual cost is usually between $10-20.  When comparing the amount you'll spend vs. the benefits you'll receive its easy to justify purchase your own domain.&lt;/p&gt;
 &lt;p&gt;In this tutorial I will show you how to configure your Github Pages website to be served from a custom domain from &lt;a href="https://domains.google"&gt;Google Domains&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;Prequisites&lt;/h4&gt;
 &lt;p&gt;You will need to own a custom domain purchased from Google Domains and have a free static website already setup on Github Pages.&lt;/p&gt;
@@ -9,24 +88,24 @@
 &lt;/ul&gt;
 &lt;h3&gt;Setting Up A Custom Domain&lt;/h3&gt;
 &lt;p&gt;After you have acquired domain name from Google Domains go ahead and login.  The first thing we will do is setup our domain name servers (DNS). Click the DNS button on the menu to browse to the next page.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/google_domains_tutorial_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_domains_tutorial_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;The best analogy I can offer for DNS it that it works like a giant phonebook for the internet.  DNS converts domain names to IP addresses.  A web browser needs an IP address to connect to a webpage but they are hard to remember (e.g. 192.168.0.100). DNS allows us to type something like &lt;em&gt;yourdomain.com&lt;/em&gt; instead which is then routed to the proper IP address. &lt;/p&gt;
 &lt;p&gt;Look around the DNS menu until you find the Custom resource records section.  Fill-in the fields as shown in the image below and then click add.  Github Pages IP addresses are unlikely to have changed since this article was written but you can research the most up to date IP addresses &lt;a href="https://help.github.com/en/articles/troubleshooting-custom-domains"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/google_domains_tutorial_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_domains_tutorial_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;We have now setup an &lt;em&gt;A record&lt;/em&gt; which points a domain to an IP address.  In this case we have pointed to multiple IP addresses because Github Pages has several servers and our website could be stored on any one of them.  A value of 1H was chosen for TTL: time-to-live.  This determines how long until changes to the DNS record go into effect&lt;/p&gt;
 &lt;p&gt;A DNS record for CNAME should also be setup.  CNAME is short for canonical name and it allows us to refer one variation of our domain name to another.  A visitor to our website would input our web address in the browser one of two ways: &lt;em&gt;yourdomain.com&lt;/em&gt; or &lt;em&gt;www.yourdomain.com&lt;/em&gt;.  We have already setup &lt;em&gt;yourdomain.com&lt;/em&gt; using the &lt;em&gt;A record&lt;/em&gt;.  By setting up a CNAME record for &lt;em&gt;www.yourdomain.com&lt;/em&gt; we can redirect it to &lt;em&gt;yourdomain.com&lt;/em&gt; eliminating the need to maintain two records.&lt;/p&gt;
 &lt;p&gt;Fill-in the DNS record for CNAME as shown below and click add.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/google_domains_tutorial_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_domains_tutorial_3.png"&gt;&lt;/p&gt;
 &lt;p&gt;Your DNS records should look like this.  Make sure your setup matches the image below before you move on.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/google_domains_tutorial_4.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_domains_tutorial_4.png"&gt;&lt;/p&gt;
 &lt;p&gt;Now we will perform the other half of the setup process on Github.  Login to Github and open up the repository for username.github.io.  Click on the settings icon.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/google_domains_tutorial_5.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_domains_tutorial_5.png"&gt;&lt;/p&gt;
 &lt;p&gt;Look for the Github Pages section of the settings menu.  Type &lt;em&gt;yourdomain.com&lt;/em&gt; in the Custom Domain field and click save.  Also check the box to enforce HTTPS to ensure your website will be served securely.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/google_domains_tutorial_6.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_domains_tutorial_6.png"&gt;&lt;/p&gt;
 &lt;p&gt;When we clicked save Github automatically created a file called CNAME in the root directory of our repository.  The CNAME file tells Github Pages to redirect any traffic to username.github.io to &lt;em&gt;yourdomain.com&lt;/em&gt; instead.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/google_domains_tutorial_7.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_domains_tutorial_7.png"&gt;&lt;/p&gt;
 &lt;p&gt;Our website is now setup to be served from &lt;em&gt;yourdomain.com&lt;/em&gt;.  The changes will not take effect immediately but after a few minutes we should be able to access our website from &lt;em&gt;yourdomain.com&lt;/em&gt;.  Also try browsing to username.github.io and you will notice the web address is redirected to &lt;em&gt;yourdomain.com&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/google_domains_tutorial_8.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/google_domains_tutorial_8.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Configuring Git&lt;/h3&gt;
 &lt;p&gt;When we added the CNAME file to our remote repository on Github it went out of sync with the repo on our local machine.  Open up the command line type the following command while in the &lt;em&gt;blog/output&lt;/em&gt; folder.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git pull
@@ -40,12 +119,26 @@
 
 
 &lt;p&gt;Test the new settings to ensure they work.  When we generate the website CNAME should remain intact in the &lt;em&gt;output&lt;/em&gt; folder.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;listen&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="google domains"></category><category term="github"></category><category term="website deployment"></category></entry><entry><title>Deploying A Static Website To Github Pages</title><link href="/posts/2019/03/10/deploying-a-static-website-to-github-pages/" rel="alternate"></link><published>2019-03-10T12:00:00-05:00</published><updated>2019-03-10T12:00:00-05:00</updated><author><name>Matthew Devaney</name></author><id>tag:None,2019-03-10:/posts/2019/03/10/deploying-a-static-website-to-github-pages/</id><summary type="html">&lt;p&gt;So you've built a static website and you want to share it with the world. Now you just need to get it up and running on the web.  After doing some research you realize there are so many options for deployment and everyone has their own opinion.  How do I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So you've built a static website and you want to share it with the world. Now you just need to get it up and running on the web.  After doing some research you realize there are so many options for deployment and everyone has their own opinion.  How do I choose the best method?  Where can I find instructions?  It all seems so overwhelming.  At least that's how it felt for me.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Next Steps&lt;/h3&gt;
+&lt;p&gt;Now that our website domain is setup we can implement a few more features on our blog. Check out the &lt;a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-on-a-static-website/"&gt;Disqus comments&lt;/a&gt; and &lt;a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"&gt;Google Analytics&lt;/a&gt; mini-tutorials for further information.&lt;/p&gt;
+&lt;h3&gt;Series&lt;/h3&gt;
+&lt;p&gt;This article is part of a series of tutorials that will show you how to create static websites with Python and Pelican&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;Build A Blog With Python And Pelican - Installation And Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;Build A Blog With Python And Pelican - Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/"&gt;Deploying A Static Website To Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/"&gt;Custom Domains With Github Pages And Google Domains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-on-a-static-website/"&gt;Disqus Comments With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"&gt;Google Analytics With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="google domains"></category><category term="github"></category><category term="pelican"></category><category term="website deployment"></category></entry><entry><title>Deploying A Static Website To Github Pages</title><link href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/" rel="alternate"></link><published>2019-03-10T12:00:00-05:00</published><updated>2019-03-10T12:00:00-05:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-03-10:/posts/2019/03/10/deploying-a-static-website-to-github-pages/</id><summary type="html">&lt;p&gt;So you've built a static website and you want to share it with the world. Now you just need to get it up and running on the web.  After doing some research you realize there are so many options for deployment and everyone has their own opinion.  How do I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So you've built a static website and you want to share it with the world. Now you just need to get it up and running on the web.  After doing some research you realize there are so many options for deployment and everyone has their own opinion.  How do I choose the best method?  Where can I find instructions?  It all seems so overwhelming.  At least that's how it felt for me.&lt;/p&gt;
 &lt;p&gt;There are a few reasons I like Github Pages for the task of hosting a small static website.  The service is free (as in beer), its reliable and I already use Github repositories to store the source code for my software projects so the workflow comes naturally.  &lt;/p&gt;
 &lt;p&gt;The second is, it's free (as in beer).&lt;/p&gt;
-&lt;p&gt;In this tutorial I will show you a simple method for deploying your own static website and its source code to Github Pages.  If you don't know how to build a static website and want to learn consider checking out &lt;a href="/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;Part 1&lt;/a&gt; and &lt;a href="/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;Part 2&lt;/a&gt; of my Pelican tutorial.&lt;/p&gt;
+&lt;p&gt;In this tutorial I will show you a simple method for deploying your own static website and its source code to Github Pages.  If you don't know how to build a static website and want to learn consider checking out the previous lessons on Pelican &lt;a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;installation and themes&lt;/a&gt; and &lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;writing content&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;Prequisites&lt;/h4&gt;
 &lt;p&gt;A basic understanding of the &lt;a href="https://git-scm.com/"&gt;Git&lt;/a&gt; and &lt;a href="https://github.com/"&gt;Github&lt;/a&gt; is required.  You will also need to sign up for a free Github account if you don't already have one.&lt;/p&gt;
 &lt;h4&gt;Goals&lt;/h4&gt;
@@ -69,9 +162,9 @@
 
 
 &lt;p&gt;Login to Github and create a new repository called &lt;em&gt;username.github.io&lt;/em&gt;.  Replace the word username with your actual Github user name.  Make the website public and do not initialize it with a readme file.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/github_pages_tutorial_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/github_pages_tutorial_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;Immediately create a second repository called &lt;em&gt;blog_source&lt;/em&gt; as well using the same settings as the first.  Now we have two empty Github repositories.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/github_pages_tutorial_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/github_pages_tutorial_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;Open up the command line.  If you are following along from a previous tutorial we should generate the website prior to deployment.  Generate the website using the command below.  We append -s publishconf.py to use settings that should only be applied when the website is being published.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -96,11 +189,21 @@ git push --set-upstream origin master
 
 
 &lt;p&gt;After running both sequences of Git commands we should be able to see our files loaded inti their respective repositories on Github.  To view our website type https://username.github.io into your web browser.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/github_pages_tutorial_3.png"&gt;&lt;/p&gt;
-&lt;h3&gt;Next steps&lt;/h3&gt;
-&lt;p&gt;We have now successfully deployed the static website.  Optionally, we can use a custom domain to replace username.github.io.  If you would like to see how that's done follow along to the &lt;a href="/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/"&gt;next tutorial&lt;/a&gt;.&lt;/p&gt;</content><category term="github"></category><category term="git"></category><category term="website deployment"></category></entry><entry><title>Build A Blog With Python And Pelican - Pt. 2 Creating Content</title><link href="/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/" rel="alternate"></link><published>2019-03-07T12:00:00-06:00</published><updated>2019-03-07T12:00:00-06:00</updated><author><name>Matthew Devaney</name></author><id>tag:None,2019-03-07:/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/</id><summary type="html">&lt;p&gt;Static website generators take content stored in a plain-text format, apply it to an HTML template and render all of the files required to build the website.  In the previous tutorial we installed a theme which included templates.  Now we will learn how to write the content for our blog …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Static website generators take content stored in a plain-text format, apply it to an HTML template and render all of the files required to build the website.  In the previous tutorial we installed a theme which included templates.  Now we will learn how to write the content for our blog, store content, and keep it all organized.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/github_pages_tutorial_3.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Next Steps&lt;/h3&gt;
+&lt;p&gt;We have now successfully deployed the static website.  Optionally, we can use a custom domain to replace username.github.io.  If you would like to see how that's done follow along to the next tutorial on &lt;a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/"&gt;custom domains&lt;/a&gt;.  Or, skip it and complete the &lt;a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-on-a-static-website/"&gt;Disqus comments&lt;/a&gt; and &lt;a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"&gt;Google Analytics&lt;/a&gt; mini-tutorials instead.&lt;/p&gt;
+&lt;h3&gt;Series&lt;/h3&gt;
+&lt;p&gt;This article is part of a series of tutorials that will show you how to create static websites with Python and Pelican&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;Build A Blog With Python And Pelican - Installation And Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;Build A Blog With Python And Pelican - Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/"&gt;Deploying A Static Website To Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/"&gt;Custom Domains With Github Pages And Google Domains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-on-a-static-website/"&gt;Disqus Comments With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"&gt;Google Analytics With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="github"></category><category term="git"></category><category term="pelican"></category><category term="website deployment"></category></entry><entry><title>Build A Blog With Python And Pelican - Pt. 2 Creating Content</title><link href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/" rel="alternate"></link><published>2019-03-07T12:00:00-06:00</published><updated>2019-03-07T12:00:00-06:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-03-07:/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/</id><summary type="html">&lt;p&gt;Static website generators take content stored in a plain-text format, apply it to an HTML template and render all of the files required to build the website.  In the previous tutorial we installed a theme which included templates.  Now we will learn how to write the content for our blog …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Static website generators take content stored in a plain-text format, apply it to an HTML template and render all of the files required to build the website.  In the previous tutorial we installed a theme which included templates.  Now we will learn how to write the content for our blog, store content, and keep it all organized.&lt;/p&gt;
 &lt;h4&gt;Prequisites&lt;/h4&gt;
-&lt;p&gt;This is the 2nd tutorial in a series on how to build a static website with Pelican.  If you haven't already done so go back to &lt;a href="/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;Part 1&lt;/a&gt; and start from the beginning.&lt;/p&gt;
+&lt;p&gt;This is the second tutorial in a series on how to build a static website with Pelican.  If you haven't already done so go back to the first tutorial to learn how to &lt;a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;install Pelican and themes&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;Goals&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Create articles and pages with Markdown&lt;/li&gt;
@@ -199,7 +302,7 @@ git push --set-upstream origin master
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="some text" src="/img/pelican_tutorial_4.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_4.png"&gt;&lt;/p&gt;
 &lt;p&gt;Now we will use Markdown to write our post's content. Markdown is a language written for non-programmers that uses symbols to represent HTML.  We apply markdown to a plain text file with the extension .md to do things link change the style (e.g. bold, italics), insert pictures and create links.  When we use Pelican to generate our website it will read the markdown file and convert it to HTML.&lt;/p&gt;
 &lt;p&gt;Anyone can learn the basics of Markdown in about 10 minutes.  The language's syntax is very well documented on the web so we will not discuss it in full detail here.  Instead we will review a few sample posts to understand the basics which will include examples specific to Pelican.  I recommend you check out either the &lt;a href="https://www.markdownguide.org/"&gt;interactive tutorial&lt;/a&gt; at markdownguide.org or Adam Pritchard's &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"&gt;Markdown Cheatsheet&lt;/a&gt; on Github before moving on with the tutorial.&lt;/p&gt;
 &lt;p&gt;Create a file called &lt;em&gt;markdown_examples_1.md" in the same location as &lt;/em&gt;first_post.md*.  Insert the following text:&lt;/p&gt;
@@ -255,8 +358,8 @@ git push --set-upstream origin master
 
 
 &lt;p&gt;The post we wrote shows the basics of how to use Markdown.  When the website was generated the Markdown was converted into HTML. HTML elements can be used when writing a markdown file but the markdown syntax is much simpler to write. Use of HTML should be the exception and not the rule.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/pelican_tutorial_5.png"&gt;&lt;/p&gt;
-&lt;p&gt;Let's prepare to write our second post.  Download the python icon image we will be using by clicking on this &lt;a href="/img/python_icon.png"&gt;link&lt;/a&gt;.  Copy the image to the content folder as shown below.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_5.png"&gt;&lt;/p&gt;
+&lt;p&gt;Let's prepare to write our second post.  Download the python icon image we will be using by clicking on this &lt;a href="https://matthewdevaney.com/img/python_icon.png"&gt;link&lt;/a&gt;.  Copy the image to the content folder as shown below.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;blog
 └── source
      ├── content
@@ -303,7 +406,7 @@ git push --set-upstream origin master
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="some text" src="/img/pelican_tutorial_6.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_6.png"&gt;&lt;/p&gt;
 &lt;p&gt;For our final blog post we will write a Python code block. Pelican displays code blocks using the popular &lt;a href="https://pygments.org"&gt;Pygments&lt;/a&gt; snytax highlighter. You will recall we setup the Pygments &lt;a href="https://help.farbox.com/pygments.html"&gt;theme&lt;/a&gt; 'monokai' in &lt;em&gt;pelicanconf.py&lt;/em&gt; earlier.  Also, Pygments is not limited to only Python.  It can handle almost any language you can think of. Check out the list of supported languages &lt;a href="http://pygments.org/languages/"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;Create a file called *markdown_examples_3.md" in the content folder.  Insert the following text:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Markdown&lt;/span&gt; &lt;span class="n"&gt;Examples&lt;/span&gt; &lt;span class="n"&gt;Part&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
@@ -336,7 +439,7 @@ git push --set-upstream origin master
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="some text" src="/img/pelican_tutorial_7.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_7.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Writing Pages vs. Articles&lt;/h3&gt;
 &lt;p&gt;Written content in Pelican takes one of two forms: &lt;em&gt;articles&lt;/em&gt; or &lt;em&gt;pages&lt;/em&gt;.  Articles are frequently updated content that can be ordered by date.  Our blog posts are all examples of articles.  Pages are more permanent in nature and are not associated with dates such as an &lt;em&gt;about me&lt;/em&gt; page.  They only appear on the navigation bar of our blog and not the list of recent posts.  We are going to make an &lt;em&gt;about me&lt;/em&gt; page for our blog.&lt;/p&gt;
 &lt;p&gt;Pelican determines which content is pages vs. articles based on where it is located in the filesystem.  Make a new folder called &lt;em&gt;pages&lt;/em&gt; within the content folder and then create a new markdown file &lt;em&gt;about_me&lt;/em&gt; as shown below.&lt;/p&gt;
@@ -364,7 +467,7 @@ git push --set-upstream origin master
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="some text" src="/img/pelican_tutorial_8.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_8.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Keeping The Content Folder Organized&lt;/h3&gt;
 &lt;p&gt;A small content-oriented website such as our blog can quickly grow into a large website as time goes on.  Organizing the file structure of our website in a logical manner will help us minimize the difficulty of maintaining our blog, leaving us more time to spend productively on creating new content.  Look at the diagram below which shows our current setup of the content folder.  A flat file structure like this one might be fine to use for a blog with 10 posts but it would become significantly harder after 100 posts.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;blog
@@ -492,7 +595,17 @@ git push --set-upstream origin master
 
 
 &lt;h3&gt;Next Steps&lt;/h3&gt;
-&lt;p&gt;In this tutorial we learned how to write new articles and pages using Markdown, keep the content folder organized and define the URL structure of our website.  We are finally ready to deploy our site to the web and share it with others.  Check out my tutorial on &lt;a href="/posts/2019/03/10/deploying-a-static-website-to-github-pages/"&gt;Deployment to Github Pages&lt;/a&gt; for more details.&lt;/p&gt;</content><category term="python"></category><category term="pelican"></category><category term="markdown"></category></entry><entry><title>Build A Blog With Python And Pelican - Pt. 1 Installation &amp; Theme</title><link href="/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/" rel="alternate"></link><published>2019-03-04T20:30:00-06:00</published><updated>2019-03-04T20:30:00-06:00</updated><author><name>Matthew Devaney</name></author><id>tag:None,2019-03-04:/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/</id><summary type="html">&lt;p&gt;Building your own static website has several advantages over a traditional website that uses a database to store content.  Static websites are faster because pages are rendered in advance and deliver the same content to all visitors.  They are cheaper to host and are more secure since the website has …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Building your own static website has several advantages over a traditional website that uses a database to store content.  Static websites are faster because pages are rendered in advance and deliver the same content to all visitors.  They are cheaper to host and are more secure since the website has no database.  No advanced programming knowledge is required to build one: HTML &amp;amp; CSS will do.&lt;/p&gt;
+&lt;p&gt;In this tutorial we learned how to write new articles and pages using Markdown, keep the content folder organized and define the URL structure of our website.  We are finally ready to deploy our site to the web and share it with others.  Check out the next tutorial on &lt;a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/"&gt;Deployment to Github Pages&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;h3&gt;Series&lt;/h3&gt;
+&lt;p&gt;This article is part of a series of tutorials that will show you how to create static websites with Python and Pelican&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;Build A Blog With Python And Pelican - Installation And Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;Build A Blog With Python And Pelican - Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/"&gt;Deploying A Static Website To Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/"&gt;Custom Domains With Github Pages And Google Domains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-on-a-static-website/"&gt;Disqus Comments With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"&gt;Google Analytics With Pelican&lt;/a&gt; mini-tutorials instead.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="python"></category><category term="pelican"></category><category term="markdown"></category></entry><entry><title>Build A Blog With Python And Pelican - Pt. 1 Installation &amp; Theme</title><link href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/" rel="alternate"></link><published>2019-03-04T20:30:00-06:00</published><updated>2019-03-04T20:30:00-06:00</updated><author><name>Matthew Devaney</name></author><id>tag:matthewdevaney.com,2019-03-04:/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/</id><summary type="html">&lt;p&gt;Building your own static website has several advantages over a traditional website that uses a database to store content.  Static websites are faster because pages are rendered in advance and deliver the same content to all visitors.  They are cheaper to host and are more secure since the website has …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Building your own static website has several advantages over a traditional website that uses a database to store content.  Static websites are faster because pages are rendered in advance and deliver the same content to all visitors.  They are cheaper to host and are more secure since the website has no database.  No advanced programming knowledge is required to build one: HTML &amp;amp; CSS will do.&lt;/p&gt;
 &lt;p&gt;Creating each page in a static website one-by-one and updating them when something changes would be very time consuming.  Static site generators take a website's content, apply it to HTML-based templates and generate all of the required files ready-to-upload.  There are many static website generators available on the web and which one you choose will depend on the language you are most comfortable with.  I chose &lt;a href="https://docs.getpelican.com/en/stable/"&gt;Pelican&lt;/a&gt; because of my preference for Python but &lt;a href="https://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; (Ruby) and &lt;a href="https://gohugo.io/"&gt;Hugo&lt;/a&gt; (Go) are perfectly acceptable solutions as well. &lt;/p&gt;
 &lt;p&gt;This tutorial is part of a series which will walkthrough all the steps from installing Pelican to deployment on Github Pages (for free).  I decided to create these tutorials after making my own website with Pelican.  &lt;/p&gt;
 &lt;h4&gt;Prequisites&lt;/h4&gt;
@@ -580,7 +693,7 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 
 
 &lt;p&gt;To view our website open your web browser and go to the the address. &lt;a href="http://127.0.0.1:8000"&gt;http://127.0.0.1:8000&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/pelican_tutorial_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_1.png"&gt;&lt;/p&gt;
 &lt;p&gt;We have now successfully setup our basic Pelican project.&lt;/p&gt;
 &lt;h3&gt;Installing The Pelican Bootstrap 3 Theme&lt;/h3&gt;
 &lt;p&gt;In my opinion the standard theme that comes with Pelican has a huge flaw: it does not display properly on mobile devices.  More than half of the world's internet traffic is mobile so we will want to use a theme that incorporates &lt;a href="https://en.wikipedia.org/wiki/Responsive_web_design"&gt;responsive web design&lt;/a&gt; principles.  To accomplish this we will change our website to use the excellent &lt;a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3"&gt;pelican-bootstrap3&lt;/a&gt; theme. To view the full listing of Pelican themes click &lt;a href="https://github.com/getpelican/pelican-themes"&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -661,7 +774,7 @@ CRITICAL: UndefinedError: &amp;#39;gettext&amp;#39; is undefined
 
 
 &lt;p&gt;View the latest version of our website at &lt;a href="http://127.0.0.1:8000"&gt;http://127.0.0.1:8000&lt;/a&gt;.  Notice when you expand and shrink the width of the web browser window the website layout changes to fit?  By selecting a theme that incorporates responsive web design principles our website will be viewable on screens of all shapes and sizes.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="some text" src="/img/pelican_tutorial_2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_2.png"&gt;&lt;/p&gt;
 &lt;p&gt;The pelican-bootstrap3 theme comes with several options to change the style of our website.  To view the full list of  available themes go the folder blog/source/theme/css.  You will see several files with the filename &lt;em&gt;bootstrap.(some name).min.css.  We will be using the the &lt;/em&gt;bootstrap.flatly.min.css&lt;em&gt; file to style our website. Open &lt;/em&gt;pelicanconf.py* and add the following line.  Take a moment to try out some other options if you'd like to see what's available.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;BOOTSTRAP_THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;flatly&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -687,6 +800,16 @@ CRITICAL: UndefinedError: &amp;#39;gettext&amp;#39; is undefined
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="some text" src="/img/pelican_tutorial_3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_3.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Next Steps&lt;/h3&gt;
-&lt;p&gt;In this part of the tutorial we learned how to install Pelican, generate a static website and apply the pelican-bootstrap3 theme. Take a quick break then head on over to &lt;a href="/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;Part 2&lt;/a&gt; of the tutorial.&lt;/p&gt;</content><category term="python"></category><category term="pelican"></category></entry></feed>
+&lt;p&gt;In this tutorial we learned how to install Pelican, generate a static website and apply the pelican-bootstrap3 theme. Take a quick break then head on over to the next lesson to learn how to &lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;create content&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Series&lt;/h3&gt;
+&lt;p&gt;This article is part of a series of tutorials that will show you how to create static websites with Python and Pelican&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/"&gt;Build A Blog With Python And Pelican - Installation And Theme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/"&gt;Build A Blog With Python And Pelican - Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/"&gt;Deploying A Static Website To Github Pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/"&gt;Custom Domains With Github Pages And Google Domains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-on-a-static-website/"&gt;Disqus Comments With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/"&gt;Google Analytics With Pelican&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="python"></category><category term="pelican"></category></entry></feed>
