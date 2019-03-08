@@ -42,8 +42,7 @@
 
         <link href="https://matthewdevaney.com/feeds/all.rss.xml" type="application/rss+xml" rel="alternate"
               title="Matthew Devaney RSS Feed"/>
-        <link href="https://matthewdevaney.com/feeds/web-development.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Matthew Devaney Web Development ATOM Feed"/>
+
 </head>
 <body>
 
@@ -134,7 +133,7 @@ Matthew Devaney            </a>
                 <p>So you've built a static website and you want to share it with the world. Now you just need to get it up and running on the web.  After doing some research you realize there are so many options for deployment and everyone has their own opinion.  How do I choose the best method?  Where can I find instructions?  It all seems so overwhelming.  At least that's how it felt for me.</p>
 <p>There are a few reasons I like Github Pages for the task of hosting a small static website.  The service is free (as in beer), its reliable and I already use Github repositories to store the source code for my software projects so the workflow comes naturally.  </p>
 <p>The second is, it's free (as in beer).</p>
-<p>In this tutorial I will show you a simple method for deploying your own static website and its source code to Github Pages.  If you don't know how to build a static website and want to learn consider checking out the previous lessons on Pelican <a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/">installation and themes</a> and <a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/">writing content</a>.</p>
+<p>In this tutorial I will show you a simple method for deploying your own static website and its source code to Github Pages.  If you don't know how to build a static website and want to learn consider checking out the previous lessons on Pelican <a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-pelican-and-python-pt-1-installation-theme/">installation and themes</a> and <a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-pelican-and-python-pt-2-creating-content/">writing content</a>.</p>
 <h4>Prequisites</h4>
 <p>A basic understanding of the <a href="https://git-scm.com/">Git</a> and <a href="https://github.com/">Github</a> is required.  You will also need to sign up for a free Github account if you don't already have one.</p>
 <h4>Goals</h4>
@@ -189,10 +188,10 @@ git push --set-upstream origin master
 <h3>Next Steps</h3>
 <p>We have now successfully deployed the static website.  Optionally, we can use a custom domain to replace username.github.io.  If you would like to see how that's done follow along to the next tutorial on <a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/">custom domains</a>.  Or, skip it and complete the <a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-with-pelican/">Disqus comments</a> and <a href="https://matthewdevaney.com/posts/2019/03/17/google-analytics-with-pelican/">Google Analytics</a> mini-tutorials instead.</p>
 <h3>Series</h3>
-<p>This article is part of a series of tutorials that will show you how to create static websites with Python and Pelican</p>
+<p>This article is part of a series of tutorials that will show you how to create static websites with Pelican And Python</p>
 <ul>
-<li><a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-python-and-pelican-pt-1-installation-theme/">Build A Blog With Python And Pelican - Installation And Theme</a></li>
-<li><a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-python-and-pelican-pt-2-creating-content/">Build A Blog With Python And Pelican - Content</a></li>
+<li><a href="https://matthewdevaney.com/posts/2019/03/04/build-a-blog-with-pelican-and-python-pt-1-installation-theme/">Build A Blog With Pelican And Python - Installation And Theme</a></li>
+<li><a href="https://matthewdevaney.com/posts/2019/03/07/build-a-blog-with-pelican-and-python-pt-2-creating-content/">Build A Blog With Pelican And Python - Content</a></li>
 <li><a href="https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/">Deploying A Static Website To Github Pages</a></li>
 <li><a href="https://matthewdevaney.com/posts/2019/03/12/custom-domains-with-github-pages-and-google-domains/">Custom Domains With Github Pages And Google Domains</a></li>
 <li><a href="https://matthewdevaney.com/posts/2019/03/15/disqus-comments-with-pelican/">Disqus Comments With Pelican</a></li>
@@ -200,36 +199,6 @@ git push --set-upstream origin master
 </ul>
             </div>
             <!-- /.entry-content -->
-    <hr/>
-    <section class="comments" id="comments">
-        <h2>Comments</h2>
-
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'matthewdevaney'; // required: replace example with your forum shortname
-
-            var disqus_config = function () {
-                this.language = "en";
-
-                        this.page.identifier = '2019-03-10-deploying-a-static-website-to-github-pages';
-                        this.page.url = 'https://matthewdevaney.com/posts/2019/03/10/deploying-a-static-website-to-github-pages/';
-            };
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function () {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript';
-                dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-            Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-    </section>
         </article>
     </section>
 
@@ -259,38 +228,6 @@ git push --set-upstream origin master
 <script src="https://matthewdevaney.com/theme/js/respond.min.js"></script>
 
 
-    <!-- Disqus -->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'matthewdevaney'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-    <!-- End Disqus Code -->
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-135011604-1']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-    <!-- End Google Analytics Code -->
 
 
 </body>
