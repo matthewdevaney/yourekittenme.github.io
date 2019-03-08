@@ -127,7 +127,7 @@ Matthew Devaney            </a>
 <p>Creating each page in a static website one-by-one and updating them when something changes would be very time consuming.  Static site generators take a website's content, apply it to HTML-based templates and generate all of the required files ready-to-upload.  There are many static website generators available on the web and which one you choose will depend on the language you are most comfortable with.  I chose <a href="https://docs.getpelican.com/en/stable/">Pelican</a> because of my preference for Python but <a href="https://jekyllrb.com/">Jekyll</a> (Ruby) and <a href="https://gohugo.io/">Hugo</a> (Go) are perfectly acceptable solutions as well. </p>
 <p>This tutorial is part of a series which will walkthrough all the steps from installing Pelican to deployment on Github Pages (for free).  I decided to create these tutorials after making my own website with Pelican.  </p>
 <h4>Prequisites</h4>
-<p>All you need to know is a little bit of Python and have a basic understanding of HTML &amp; CSS.  We will be testing our website locally so no knowledge of how to deploy to the web is required.</p>
+<p>All you need to know is a little bit of Python and have a basic understanding of HTML &amp; CSS.  We will be testing our website locally in this section so no knowledge of how to deploy to the web is required.</p>
 <h4>Goals</h4>
 <ul>
 <li>Install Pelican</li>
@@ -195,7 +195,7 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 <li>pelicanconf.py - website settings file</li>
 <li>publishconf.py - additional website settings used only when the website is published</li>
 </ul>
-<p>Now that our basic project skeleton is setup we should generate our website and preview what it looks like.  First, we must tell Pelican where to output the website to.  By default it will be generated to blog/source/output ut we wanted them to appear in blog/output instead.  Delete the folder blog/source/output.  Now open <em>pelicanconf.py</em> and add the following line: </p>
+<p>Now that our basic project skeleton is setup we should generate our website and preview what it looks like.  First, we must tell Pelican which folder to output the website to.  By default it will be generated to blog/source/output but we wanted them to appear in blog/output instead.  Delete the folder blog/source/output.  Now open <em>pelicanconf.py</em> and add the following line: </p>
 <div class="highlight"><pre><span></span><span class="n">OUTPUT_PATH</span> <span class="o">=</span> <span class="s1">&#39;../output&#39;</span>
 </pre></div>
 
@@ -205,7 +205,7 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 </pre></div>
 
 
-<p>Finally, run the following command while in the source folder to setup a local http server to serve our website on our local machine.</p>
+<p>Finally, run the following command while in the source folder.  It will setup an http server on our local machine that will allow us to preview the website.</p>
 <div class="highlight"><pre><span></span>pelican --listen
 </pre></div>
 
@@ -214,7 +214,7 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 <p><img alt="some text" src="https://matthewdevaney.com/img/pelican_tutorial_1.png"></p>
 <p>We have now successfully setup our basic Pelican project.</p>
 <h3>Installing The Pelican Bootstrap 3 Theme</h3>
-<p>In my opinion the standard theme that comes with Pelican has a huge flaw: it does not display properly on mobile devices.  More than half of the world's internet traffic is mobile so we will want to use a theme that incorporates <a href="https://en.wikipedia.org/wiki/Responsive_web_design">responsive web design</a> principles.  To accomplish this we will change our website to use the excellent <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a> theme. To view the full listing of Pelican themes click <a href="https://github.com/getpelican/pelican-themes">here</a>.</p>
+<p>In my opinion the standard theme that comes with Pelican has one huge flaw: it does not display properly on mobile devices.  More than half of the world's internet traffic is mobile so we will want to use a theme that incorporates <a href="https://en.wikipedia.org/wiki/Responsive_web_design">responsive web design</a> principles.  To accomplish this we will change our website to use the excellent <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a> theme. To view the full listing of Pelican themes click <a href="https://github.com/getpelican/pelican-themes">here</a>.</p>
 <p>Start by creating a new folder called <em>theme</em> in the source folder.</p>
 <div class="highlight"><pre><span></span>blog
   └── source
@@ -228,7 +228,7 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 </pre></div>
 
 
-<p>Next, go to GitHub and download the <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a> theme.  Place pelican-bootstrap3 files into the blog/source/theme folder so it looks like this:</p>
+<p>Next, go to GitHub and download the <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3">pelican-bootstrap3</a> theme.  Place all pelican-bootstrap3 files into the blog/source/theme folder so it looks like this:</p>
 <div class="highlight"><pre><span></span>blog
   └── source
        ├── content
@@ -250,8 +250,8 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 </pre></div>
 
 
-<p>The error is caused by a missing plugin <em>i18n_subsites</em> which is used by pelican-bootstrap3 to provide support for internationalization (i.e. i18n). We must <a href="https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites">download this file</a> from Github and in include it in our project. To view the full listing of Pelican plugins click <a href="https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites">here</a>.</p>
-<p>Add another folder inside the source called plugins. Place the i18n_subsites plugin you downloaded from Github into that folder:</p>
+<p>The error is caused by a missing plugin <em>i18n_subsites</em> which is used by pelican-bootstrap3 to provide support for internationalization (i.e. i18n). We must download the <a href="https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites">i18n_subsistes plugin</a> from Github and in include it in our project. To view the full listing of available Pelican plugins click <a href="https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites">here</a>.</p>
+<p>Add another folder inside the source called plugins. Place the i18n_subsites folder and files you downloaded from Github into the plugins folder:</p>
 <div class="highlight"><pre><span></span>blog
   └── source
        ├── content
@@ -261,7 +261,7 @@ Do you want to generate a tasks.py/Makefile to automate generation and publishin
 </pre></div>
 
 
-<p>We must tell pelican where the plugins folder is located just as we did for the theme folder.  Open <em>pelicanconf.py</em> and add the following line.</p>
+<p>We must tell Pelican where the plugins folder is located just as we did for the theme folder.  Open <em>pelicanconf.py</em> and add the following line.</p>
 <div class="highlight"><pre><span></span><span class="n">PLUGIN_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;plugins/&#39;</span><span class="p">,</span> <span class="p">]</span>
 </pre></div>
 
