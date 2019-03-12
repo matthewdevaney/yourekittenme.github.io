@@ -1164,7 +1164,7 @@ h6,.h6{
 }
 /* origin margin was 0 0 10px */
 p{
-    margin: 30px 0 30px
+    margin: 15px 0 30px;
 }
 .lead{
     margin-bottom:20px;
@@ -5796,4 +5796,8 @@ input:focus,.form-control:focus{
 .entry-content img{
     border: 1px solid #cccccc;
     border-radius: 4px;
+}
+
+.published{
+    margin: 15px 0 0 0;
 }
